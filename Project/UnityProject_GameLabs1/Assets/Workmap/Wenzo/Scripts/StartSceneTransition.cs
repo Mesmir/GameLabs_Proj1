@@ -28,5 +28,11 @@ public class StartSceneTransition : MonoBehaviour {
     {
         sceneNumber += 1;
         SceneManager.LoadSceneAsync(sceneNumber);
+        Vector3 playerPos = saveList[0].transform.position;
+        playerPos.x = 0;
+        saveList[0].transform.position = playerPos;
+        Vector3 camPos = saveList[1].transform.position;
+        camPos.x = 0;
+        saveList[1].transform.position = camPos;
     }
 }
