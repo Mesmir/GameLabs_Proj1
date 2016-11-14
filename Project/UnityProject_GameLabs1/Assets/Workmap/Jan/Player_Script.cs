@@ -96,7 +96,7 @@ public class Player_Script : MonoBehaviour {
         cantCombo = false;
     }
 
-    public void SwitchDamage() //bepaal de damage momenten in de attacks, roep dit aan via unity animaties
+    public void SwitchDamage() //bepaal de damage momenten in de attacks, roep dit aan via unity anim0aties
     {
         ableToDealDamage = !ableToDealDamage;
     }
@@ -107,4 +107,5 @@ public class Player_Script : MonoBehaviour {
         curCombo.Clear();
         timer = comboSpeedInput;
     }
+
 }
