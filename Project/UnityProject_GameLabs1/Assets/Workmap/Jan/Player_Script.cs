@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class Player_Script : MonoBehaviour {
 
-    private bool inCombo;
+    [HideInInspector]
+    public bool inCombo;
     private bool cantCombo;
     //private List<KeyCode> curCombo = new List<KeyCode>(); //de combo die je nu probeert uit te voeren //later vervangen door strings, zoals Fire1
     private List<string> curCombo = new List<string>();

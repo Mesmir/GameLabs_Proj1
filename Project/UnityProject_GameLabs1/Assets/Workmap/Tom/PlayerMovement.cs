@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	private Rigidbody playerRb;
 	public float speed = 7f;
+    public float jumpHeight = 3f;
 	public bool faceRight = true;	
 	private float moveUpDown;
 	private int numberJumps;
@@ -29,18 +30,20 @@ public class PlayerMovement : MonoBehaviour
 	
 	void FixedUpdate () 
 	{
-        
-        Walking();
-		Jumping();
-		if (onGround) 
-		{
-			Crouching();
-		}
-		if(onWall == true)
-		{
-			WallJumpTimer();
-		}
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        if (!GameObject.FindWithTag("Player").GetComponent<Player_Script>().inCombo)
+        {
+            Walking();
+            Jumping();
+            if (onGround)
+            {
+                Crouching();
+            }
+            if (onWall == true)
+            {
+                WallJumpTimer();
+            }
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
     }
 	
 	public void Walking ()
@@ -87,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
 				if(currentJumps < numberJumps)
 				{
 					playerRb.velocity = Vector3.zero; 
-					playerRb.AddForce(transform.up * (speed * 55));
+					playerRb.AddForce(transform.up * (jumpHeight * 100));
 				}
 			}
 		}
