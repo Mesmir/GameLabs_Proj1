@@ -28,10 +28,10 @@ public class CameraMovement : MonoBehaviour
         rot.y = 0.0f;
         transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
 
-        if (player.position.y > transform.position.y || player.position.y < transform.position.y)
+        if (player.position.y > transform.position.y + 2 || player.position.y < transform.position.y)
         {
             Vector3 tempPosOfY = transform.position;
-            tempPosOfY.y = player.position.y;
+            tempPosOfY.y = player.position.y + 2;
             transform.position = Vector3.MoveTowards(transform.position, tempPosOfY, followSpeedY);
         }
 
