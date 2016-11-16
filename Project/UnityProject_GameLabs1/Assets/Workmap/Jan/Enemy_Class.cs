@@ -19,36 +19,6 @@ namespace Enemy
 
             public Animation idle;
             public Animation walking;
-
-            public Enemy(Animation _idle, Animation _walking)
-            {
-                idle = _idle;
-                walking = _walking;
-            }
-
-            public Enemy(int _hp, float _speed, float _noticeRange, EnemyAttack[] _attacks)
-            {
-                hp = _hp;
-                speed = _speed;
-                noticeRange = _noticeRange;
-                attacks = _attacks;
-            }
-            public Enemy(int _hp, float _speed, float _noticeRange, EnemyAttack[] _attacks, float _drainRange, int _drainSpeed)
-            {
-                hp = _hp;
-                speed = _speed;
-                noticeRange = _noticeRange;
-                attacks = _attacks;
-                drainRange = _drainRange;
-                drainSpeed = _drainSpeed;
-                drainsStamina = true;
-            }
-            public Enemy(float _drainRange, int _drainSpeed) //add draining
-            {
-                drainRange = _drainRange;
-                drainSpeed = _drainSpeed;
-                drainsStamina = true;
-            }
         }
 
         [Serializable]
