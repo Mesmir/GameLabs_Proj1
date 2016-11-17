@@ -43,7 +43,7 @@ public class CameraMovement : MonoBehaviour
             Debug.Log("you may move");
         }
         if (rightBorderCheck.x < 1 && viewPos.x > 0.45f || leftBorderCheck.x > 0 && viewPos.x < 0.55f)// als de rightborder in view komt stopt ie, check of de speler aan de linkerkant van het scherm is om terug te gaan.
-        {
+        {   //kan ook wel met distance
             mayMoveRight = false;
             Debug.Log("Aborderisinrange");
         }
