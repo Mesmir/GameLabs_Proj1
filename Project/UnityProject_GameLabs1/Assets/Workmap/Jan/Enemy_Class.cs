@@ -33,32 +33,6 @@ namespace Enemy
             public Transform projectile;
             public Transform projectileVector;
             public Animation attack;
-
-            public EnemyAttack(string _name, bool _unique)
-            {
-                name = _name;
-                unique = _unique;
-            }
-
-            public EnemyAttack(int _damage, int _damageStamina, float _minRange, float _maxRange, Animation _attack)
-            {
-                damage = _damage;
-                damageStamina = _damageStamina;
-                minRange = _minRange;
-                maxRange = _maxRange;
-                attack = _attack;
-            }
-
-            public EnemyAttack(int _damage, int _damageStamina, float _minRange, float _maxRange, Transform _projectile, Animation _attack, Transform _projectileVector)
-            {
-                damage = _damage;
-                damageStamina = _damageStamina;
-                minRange = _minRange;
-                maxRange = _maxRange;
-                projectile = _projectile;
-                attack = _attack;
-                projectileVector = _projectileVector;
-            }
         }
     }
 }
