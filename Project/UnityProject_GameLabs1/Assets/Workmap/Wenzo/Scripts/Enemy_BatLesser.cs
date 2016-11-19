@@ -14,22 +14,6 @@ using System.Collections;
 public class Enemy_BatLesser : Enemy_Base {
 
     public bool isChasing;
-
-    IEnumerator WaitAndPrint()
-    {
-        // suspend execution for 5 seconds
-        yield return new WaitForSeconds(5);
-        print("WaitAndPrint " + Time.time);
-    }
-    IEnumerator Start()
-    {
-        print("Starting " + Time.time);
-
-        // Start function WaitAndPrint as a coroutine
-        yield return StartCoroutine("WaitAndPrint");
-        print("Done " + Time.time);
-    }
-
     //protected override GameObject FindPlayer()
     //{
     //    return base.FindPlayer();
@@ -43,6 +27,11 @@ public class Enemy_BatLesser : Enemy_Base {
     public void OnTriggerEnter()
     {
         StartCoroutine (Chase());
+    }
+
+    public void OnTriggerExit()
+    {
+        StopCoroutine(Chase());
     }
 
     public IEnumerator Chase()
