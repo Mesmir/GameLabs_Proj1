@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObjectFade : MonoBehaviour {
+public class ObjectFade_Old : MonoBehaviour {
     [Range(0,1)]
     public float fadeSpeed = 0.5f;
     public LayerMask hideable;

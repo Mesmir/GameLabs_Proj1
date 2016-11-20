@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Stats_Player : MonoBehaviour {
+public class Stats_Player_Old : MonoBehaviour {
 
     public enum StaminaLevels { Frenzy = 0, Weak = 100, Normal = 300, Strong = 800};
     public int FrenzyLock, WeakLock, NormalLock, StrongLock; //de combos die je lockt als je sterker/zwakker wordt

@@ -14,6 +14,10 @@ using System.Collections;
 public class Enemy_BatLesser : Enemy_Base {
 
     public bool isChasing;
+    public Transform player;
+    public float rayCheckRange;
+    RaycastHit hit;
+
     //protected override GameObject FindPlayer()
     //{
     //    return base.FindPlayer();
@@ -24,23 +28,36 @@ public class Enemy_BatLesser : Enemy_Base {
     //    return base.ReceiveDamage(damage, remainingHP);
     //}
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider onCol)
     {
-        StartCoroutine (Chase());
+        if (onCol.tag == "Player")
+        {
+            isChasing = true;
+            StartCoroutine(Chase());
+        }
+        print("entering zone");
     }
 
     public void OnTriggerExit()
     {
         StopCoroutine(Chase());
+        isChasing = false;
+        print("Trying to stop it");
     }
 
     public IEnumerator Chase()
     {
-
         while (isChasing)
         {
+            Debug.DrawRay(transform.position, player.position, Color.red, 3f);
+            if (Physics.Raycast(transform.position, player.position, out hit, rayCheckRange))
+            {
+                print("Shootin rays");
+                Debug.Log(hit.transform.name);
+            }
             print("Still Chasing");
             yield return false;
         }
+        print("still going on?");
     }
 }
