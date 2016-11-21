@@ -17,8 +17,6 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody rigidbodyPlayer;
 
-    //public GameObject assist;
-
     [Space(10), Header("Adjustments can be made while playing!")]
 
     public float movementSpeed;
@@ -50,15 +48,12 @@ public class Movement : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        if (GetComponent<Combat>().currentStatus == Combat.CharacterStatus.Available)
-        {
-            //Crouching();
-            Moving();
-            Jumping();
-            if (onWall)
-                TimerWallJump();
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        }
+        Jumping();
+        Crouching();
+        Moving();
+        if (onWall)
+            TimerWallJump();
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     public void Moving ()
@@ -67,36 +62,28 @@ public class Movement : MonoBehaviour {
         inputAxis = Input.GetAxis("Horizontal");
         Vector3 rotation;
         rotation = new Vector3(0, 0, 0);
-        if(inputAxis >= 0.1)
+        if (inputAxis >= 0.1)
         {
-            animatorPlayer.SetBool("Moving", true);
+            animatorPlayer.SetTrigger("Movement");
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
-            if (inputAxis >= 0.4)
-                animatorPlayer.SetBool(" ", true);
         }
         else if (inputAxis <= -0.1)
         {
-            animatorPlayer.SetBool("Moving", true);
+            animatorPlayer.SetTrigger("Movement");
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
-            if (inputAxis <= -0.4)
-                animatorPlayer.SetBool(" ", true);
         }
-
-        //edit Wenzo;
-        else if (inputAxis == 0)
-        {
-            animatorPlayer.SetBool("Moving", false);
-        }
+        else if (inputAxis > -0.1 && inputAxis < 0.1)
+            animatorPlayer.SetTrigger("Idle");
     }
 
     public void Crouching ()
     {
         Vector3 positionCollider;
-        //positionCollider = new Vector3(0, 0, 0);
+        positionCollider = new Vector3(0, 0, 0);
         if (Input.GetButton("Crouch"))
             crouching = true;
         else
@@ -121,7 +108,6 @@ public class Movement : MonoBehaviour {
     public void Jumping ()
     {
         if (Input.GetButtonDown("Jump"))
-            print("Jump");
             if(!crouching)
                 if (jumps > 0)
                 {
@@ -132,7 +118,7 @@ public class Movement : MonoBehaviour {
                         onWall = false;
                         wST = wallStickTime;
                     }
-                    //animatorPlayer.SetBool(" ", true);
+                    animatorPlayer.SetTrigger("Jumping");
                     rigidbodyPlayer.velocity = Vector3.zero;
                     rigidbodyPlayer.AddForce(transform.up * (jumpHeight * 100));
                 }
