@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
     public int lastSaveFile = 1;
+    public string[] levelNames;
 
     public void NewGame()
     {
-        //laad eerste scene, simpel als dat
+        SceneManager.LoadScene(levelNames[0], LoadSceneMode.Single);
     }
 
     public void Continue()

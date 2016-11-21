@@ -6,16 +6,15 @@ public class Combo : MonoBehaviour {
     [Serializable]
     public class combos
     {
-        public string name;
+        public string name; //ook de naam van de state
         public bool unlocked = false;
-        public AnimationClip anim;
         public int damage;
         public string[] comboString;
         public int staminaCost;
         public GameObject[] damageAreas;
         public ParticleEffect[] particles;
         public bool isRanged;
-        public GameObject[] projectile;
+        public GameObject projectile;
         public Transform projectileVector;
     }
     [Serializable]

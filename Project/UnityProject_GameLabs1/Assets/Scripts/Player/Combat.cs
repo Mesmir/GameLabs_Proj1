@@ -84,13 +84,14 @@ public class Combat : MonoBehaviour {
 
     #region InCombo
 
+    public int currentCombo = 0;
+
     private void UseCombo(int usingComboNumber)
     {
         Debug.Log(combos[usingComboNumber].name + " " + (combos[usingComboNumber].damage));
         currentStatus = CharacterStatus.Comboing;
-        anim.SetBool("InCombo", true); //dit kan ervoor zorgen dat hij niks anders qua animatie mag doen.
-        AnimationClip clip = combos[usingComboNumber].anim;
-        anim.Play("clip"); //inset/outset nog even doen
+        currentCombo = usingComboNumber;
+        anim.SetTrigger(combos[currentCombo].name);
     }
 
     private void EndCombo()

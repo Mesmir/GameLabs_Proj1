@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody rigidbodyPlayer;
 
-    public GameObject assist;
+    //public GameObject assist;
 
     [Space(10), Header("Adjustments can be made while playing!")]
 
@@ -50,12 +50,15 @@ public class Movement : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        Crouching();
-        Moving();
-        Jumping();
-        if (onWall)
-            TimerWallJump();
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        if (GetComponent<Combat>().currentStatus == Combat.CharacterStatus.Available)
+        {
+            //Crouching();
+            Moving();
+            Jumping();
+            if (onWall)
+                TimerWallJump();
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
     }
 
     public void Moving ()
@@ -66,7 +69,7 @@ public class Movement : MonoBehaviour {
         rotation = new Vector3(0, 0, 0);
         if(inputAxis >= 0.1)
         {
-            //animatorPlayer.SetBool(" ", true);
+            animatorPlayer.SetBool("Moving", true);
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
@@ -75,12 +78,18 @@ public class Movement : MonoBehaviour {
         }
         else if (inputAxis <= -0.1)
         {
-            //animatorPlayer.SetBool(" ", true);
+            animatorPlayer.SetBool("Moving", true);
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
-            if (inputAxis >= 0.4)
+            if (inputAxis <= -0.4)
                 animatorPlayer.SetBool(" ", true);
+        }
+
+        //edit Wenzo;
+        else if (inputAxis == 0)
+        {
+            animatorPlayer.SetBool("Moving", false);
         }
     }
 
@@ -112,6 +121,7 @@ public class Movement : MonoBehaviour {
     public void Jumping ()
     {
         if (Input.GetButtonDown("Jump"))
+            print("Jump");
             if(!crouching)
                 if (jumps > 0)
                 {

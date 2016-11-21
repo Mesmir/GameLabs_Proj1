@@ -5,7 +5,12 @@ public class AttackData : MonoBehaviour {
 
     public bool invincibleFrames;
     public bool damageFrames;
-    public Transform[] damageAreas;
+    private Combat combat;
+
+    private void Awake()
+    {
+        combat = GetComponent<Combat>();
+    }
 
     public void SwitchInvisibilityFrames()
     {
@@ -19,11 +24,12 @@ public class AttackData : MonoBehaviour {
 
     public void ShootProjectile()
     {
-        //schiet projectile uit huidige combo
+        GameObject projectiles = combat.combos[combat.currentCombo].projectile;
+        //schiet hem uit de voorkant van de speler, uit currentcombo.projectileVector
     }
 
     public void ActivateParticles()
     {
-        //activeer particles
+        //activeer particles, voor later niet voor deze build
     }
 }
