@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
             Vector3 tempPosOfX = transform.position;
             tempPosOfX.x = player.position.x;
             transform.position = Vector3.MoveTowards(transform.position, tempPosOfX, followSpeedX);
-            Debug.Log("you may move");
+            //Debug.Log("you may move");
         }
         if (rightBorderCheck.x < 1 && viewPos.x > 0.45f || leftBorderCheck.x > 0 && viewPos.x < 0.55f)// als de rightborder in view komt stopt ie, check of de speler aan de linkerkant van het scherm is om terug te gaan.
         {   //kan ook wel met distance

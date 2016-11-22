@@ -17,9 +17,12 @@ public class AttackData : MonoBehaviour {
         invincibleFrames = !invincibleFrames;
     }
 
-    public void DealsDamage()
+    public void DealsDamage(int doesDamage)
     {
-        damageFrames = !damageFrames;
+        if (doesDamage == 0)
+            damageFrames = false;
+        else
+            damageFrames = true;
     }
 
     public void ShootProjectile()

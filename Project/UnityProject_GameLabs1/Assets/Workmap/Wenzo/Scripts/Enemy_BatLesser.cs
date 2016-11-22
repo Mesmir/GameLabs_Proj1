@@ -35,14 +35,14 @@ public class Enemy_BatLesser : Enemy_Base {
             isChasing = true;
             StartCoroutine(Chase());
         }
-        print("entering zone");
+        //print("entering zone");
     }
 
     public void OnTriggerExit()
     {
         StopCoroutine(Chase());
         isChasing = false;
-        print("Trying to stop it");
+        //print("Trying to stop it");
     }
 
     public IEnumerator Chase()
@@ -52,12 +52,12 @@ public class Enemy_BatLesser : Enemy_Base {
             Debug.DrawRay(transform.position, player.position, Color.red, 3f);
             if (Physics.Raycast(transform.position, player.position, out hit, rayCheckRange))
             {
-                print("Shootin rays");
-                Debug.Log(hit.transform.name);
+                //print("Shootin rays");
+                //Debug.Log(hit.transform.name);
             }
-            print("Still Chasing");
+            //print("Still Chasing");
             yield return false;
         }
-        print("still going on?");
+        //print("still going on?");
     }
 }

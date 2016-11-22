@@ -7,11 +7,11 @@ public class ObjectFade : MonoBehaviour {
     public float fadeLimit = 0.1f;
     public LayerMask hideable;
     private Transform hidingObject;
-    private GameObject player;
+    public GameObject player;
 
 	void Start ()
     {
-        player = GameObject.FindWithTag("Player");
+        //player = GameObject.FindWithTag("Player");
 	}
 	
 	void Update ()
@@ -23,7 +23,7 @@ public class ObjectFade : MonoBehaviour {
     {
         Vector2 dir = player.transform.position - transform.position;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, dir, out hit, 100, hideable))
+        if (Physics.Raycast(transform.position, dir, out hit, 500, hideable))
         {
             FadingAlpha(hit.transform);
         }

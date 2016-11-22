@@ -64,20 +64,23 @@ public class Movement : MonoBehaviour {
         rotation = new Vector3(0, 0, 0);
         if (inputAxis >= 0.1)
         {
-            animatorPlayer.SetTrigger("Movement");
+            animatorPlayer.SetBool("Moving", true);
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis <= -0.1)
         {
-            animatorPlayer.SetTrigger("Movement");
+            animatorPlayer.SetBool("Moving", true);
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
+        {
             animatorPlayer.SetTrigger("Idle");
+            animatorPlayer.SetBool("Moving", false);
+        }
     }
 
     public void Crouching ()
