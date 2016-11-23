@@ -1,0 +1,51 @@
+Underground:
+	- Main character:
+
+		- Model; //done
+			- Weapon (knife);
+		- Texture; //done
+		- Animaties;
+			- walking;
+			- idle;
+			- attacks (5 (knife)attack animations for combo's)
+			- jump;
+			- Death;
+			- Crouch;
+	- Main enemy:
+
+		- Model (sparrows of GoT?);
+			- Weapon (sword);
+		- Texture;
+		- Animaties:
+			- walking;
+			- attacks (2 attack animaties, kan wellicht van de player worden gecopied);
+			- idle (kan ook van payer worden herbruikt);
+			- death (ook van player);
+	- Bat:
+
+		- Model; //done
+		- Texture; //done
+		- Animaties:
+			- hanging (from the ceilings);
+			- flying (renzo already has one(?)); //done?
+	- Boss (tokkie):
+
+		- Model; //done
+			- Weapon (big basebal bat); //done
+		- Texture; //done
+		- Animaties:
+			- idle
+			- walk
+			- attacks (3 attacks (1 spin, 1 charge);
+
+	- Boss (high priest):
+		(most attacks will use particles)
+		- Model;
+		- Weapon (cross);
+		- Texture;
+		- Animaties:
+			- idle
+			- walk
+			- "attacks" (2 "attacks" (1 holds cross in air, 1 swing (with cross) attack,)
+			- casting stance;
+			- praying stance;

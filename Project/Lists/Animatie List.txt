@@ -1,0 +1,30 @@
+Animation lijst:
+	- Main player:
+		- 5x attacking animaties voor de player met de knife (voor combo)
+		- walking animatie
+		- idle animatie
+		- death animatie
+		- jump animatie
+		- animatie aan wall te hangen en af springen
+
+	- Main enemy:
+		- (?) 2x attacking animaties voor de enemy met een zwaard
+			(mischien kan een player animatie hergebruikt worden)
+			(walking, idle en death animatie kan van de player worden gebruikt)
+
+	- Bat:
+		- een "animatie" van dat de bat aan het plafond hangt;
+
+	- "Tokkie" boss:
+		- walking animatie
+		- idle animatie
+		- death animatie
+		- 3x attack animaties waarvan 1 een spin attack en 1 een charge attack
+
+	- High priest boss:
+		- idle animatie
+		- walking animatie
+		- animatie dat hij zijn cross in de lucht houd
+		- 1x swing met z'n cross 
+		(mischien kan een animatie van de enemy worden hergebruikt omdat we met met behulp van particles een sword willen maken 
+		(cross word de handle en "holy magic" de blade, zoek ds3 farron flashsword voor het idee)
