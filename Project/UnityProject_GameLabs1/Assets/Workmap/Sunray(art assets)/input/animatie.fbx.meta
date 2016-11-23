@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 546d9060ddbfc6041959bfbd811a2ddd
+timeCreated: 1479471170
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bat
+    100004: clavicle_L
+    100006: clavicle_R
+    100008: ear_end_L
+    100010: ear_end_R
+    100012: ear_L
+    100014: ear_middle_L
+    100016: ear_middle_R
+    100018: ear_R
+    100020: elbow_L
+    100022: elbow_R
+    100024: foot_end_L
+    100026: foot_end_R
+    100028: foot_L
+    100030: foot_R
+    100032: hand_L
+    100034: hand_R
+    100036: head
+    100038: joint12
+    100040: knee_L
+    100042: knee_R
+    100044: neck
+    100046: one_end_L
+    100048: one_end_R
+    100050: one_middle_L
+    100052: one_middle_R
+    100054: pelvis
+    100056: shoulder_L
+    100058: shoulder_R
+    100060: skeleton
+    100062: skeleton 1
+    100064: skeleton1
+    100066: spine_2
+    100068: spine_3
+    100070: spine_4_ROTATE_BACK_
+    100072: tail_1
+    100074: tail_2
+    100076: tail_3
+    100078: tail_end
+    100080: three_end_L
+    100082: three_end_R
+    100084: three_middle_L
+    100086: three_middle_R
+    100088: two_end_L
+    100090: two_end_R
+    100092: two_middle_L
+    100094: two_middle_R
+    100096: under_jaw
+    100098: under_jaw_end
+    100100: upperjaw
+    400000: //RootNode
+    400002: bat
+    400004: clavicle_L
+    400006: clavicle_R
+    400008: ear_end_L
+    400010: ear_end_R
+    400012: ear_L
+    400014: ear_middle_L
+    400016: ear_middle_R
+    400018: ear_R
+    400020: elbow_L
+    400022: elbow_R
+    400024: foot_end_L
+    400026: foot_end_R
+    400028: foot_L
+    400030: foot_R
+    400032: hand_L
+    400034: hand_R
+    400036: head
+    400038: joint12
+    400040: knee_L
+    400042: knee_R
+    400044: neck
+    400046: one_end_L
+    400048: one_end_R
+    400050: one_middle_L
+    400052: one_middle_R
+    400054: pelvis
+    400056: shoulder_L
+    400058: shoulder_R
+    400060: skeleton
+    400062: skeleton 1
+    400064: skeleton1
+    400066: spine_2
+    400068: spine_3
+    400070: spine_4_ROTATE_BACK_
+    400072: tail_1
+    400074: tail_2
+    400076: tail_3
+    400078: tail_end
+    400080: three_end_L
+    400082: three_end_R
+    400084: three_middle_L
+    400086: three_middle_R
+    400088: two_end_L
+    400090: two_end_R
+    400092: two_middle_L
+    400094: two_middle_R
+    400096: under_jaw
+    400098: under_jaw_end
+    400100: upperjaw
+    4300000: bat
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: bat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bat
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/joint12
+        weight: 1
+      - path: skeleton/neck
+        weight: 1
+      - path: skeleton/neck/clavicle_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/one_middle_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/one_middle_L/one_end_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/three_middle_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/three_middle_L/three_end_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/two_middle_L
+        weight: 1
+      - path: skeleton/neck/clavicle_L/shoulder_L/elbow_L/hand_L/two_middle_L/two_end_L
+        weight: 1
+      - path: skeleton/neck/clavicle_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/one_middle_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/one_middle_R/one_end_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/three_middle_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/three_middle_R/three_end_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/two_middle_R
+        weight: 1
+      - path: skeleton/neck/clavicle_R/shoulder_R/elbow_R/hand_R/two_middle_R/two_end_R
+        weight: 1
+      - path: skeleton/neck/head
+        weight: 1
+      - path: skeleton/neck/head/ear_L
+        weight: 1
+      - path: skeleton/neck/head/ear_L/ear_middle_L
+        weight: 1
+      - path: skeleton/neck/head/ear_L/ear_middle_L/ear_end_L
+        weight: 1
+      - path: skeleton/neck/head/ear_R
+        weight: 1
+      - path: skeleton/neck/head/ear_R/ear_middle_R
+        weight: 1
+      - path: skeleton/neck/head/ear_R/ear_middle_R/ear_end_R
+        weight: 1
+      - path: skeleton/neck/head/under_jaw
+        weight: 1
+      - path: skeleton/neck/head/under_jaw/under_jaw_end
+        weight: 1
+      - path: skeleton/neck/head/upperjaw
+        weight: 1
+      - path: skeleton/spine_2
+        weight: 1
+      - path: skeleton/spine_2/spine_3
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton 1
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton 1/knee_L
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton 1/knee_L/foot_L
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton 1/knee_L/foot_L/foot_end_L
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton1
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton1/knee_R
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton1/knee_R/foot_R
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/skeleton1/knee_R/foot_R/foot_end_R
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/tail_1
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/tail_1/tail_2
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/tail_1/tail_2/tail_3
+        weight: 1
+      - path: skeleton/spine_2/spine_3/spine_4_ROTATE_BACK_/pelvis/tail_1/tail_2/tail_3/tail_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
