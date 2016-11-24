@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour {
     {
         rigidbodyPlayer = GetComponent<Rigidbody>();
         wST = wallStickTime;
+        jumps = maxJumps;
         if(movementSpeed == 0)
             movementSpeed = 3;
         if (maxJumps == 0)
@@ -78,7 +79,7 @@ public class Movement : MonoBehaviour {
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
         {
-            animatorPlayer.SetTrigger("Idle");
+            //animatorPlayer.SetTrigger("Idle");
             animatorPlayer.SetBool("Moving", false);
         }
     }
@@ -112,6 +113,7 @@ public class Movement : MonoBehaviour {
     {
         if (Input.GetButtonDown("Jump"))
             if(!crouching)
+            {
                 if (jumps > 0)
                 {
                     jumps--;
@@ -125,6 +127,7 @@ public class Movement : MonoBehaviour {
                     rigidbodyPlayer.velocity = Vector3.zero;
                     rigidbodyPlayer.AddForce(transform.up * (jumpHeight * 100));
                 }
+            }
     }
 
     public void TimerWallJump ()

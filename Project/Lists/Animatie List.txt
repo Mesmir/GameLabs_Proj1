@@ -6,6 +6,7 @@ Animation lijst:
 		- death animatie
 		- jump animatie
 		- animatie aan wall te hangen en af springen
+		- one ranged attack
 
 	- Main enemy:
 		- (?) 2x attacking animaties voor de enemy met een zwaard
