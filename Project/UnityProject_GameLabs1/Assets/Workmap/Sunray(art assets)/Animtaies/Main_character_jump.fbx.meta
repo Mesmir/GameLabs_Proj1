@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 5f43fff8bbcc99b4e9763256f336aab1
+timeCreated: 1479993777
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: LP1:Head
+    100002: LP1:HeadTop_End
+    100004: LP1:Hips
+    100006: LP1:LeftArm
+    100008: LP1:LeftFoot
+    100010: LP1:LeftForeArm
+    100012: LP1:LeftHand
+    100014: LP1:LeftHandIndex1
+    100016: LP1:LeftHandIndex2
+    100018: LP1:LeftHandIndex3
+    100020: LP1:LeftHandIndex4
+    100022: LP1:LeftHandMiddle1
+    100024: LP1:LeftHandMiddle2
+    100026: LP1:LeftHandMiddle3
+    100028: LP1:LeftHandMiddle4
+    100030: LP1:LeftHandPinky1
+    100032: LP1:LeftHandPinky2
+    100034: LP1:LeftHandPinky3
+    100036: LP1:LeftHandPinky4
+    100038: LP1:LeftHandRing1
+    100040: LP1:LeftHandRing2
+    100042: LP1:LeftHandRing3
+    100044: LP1:LeftHandRing4
+    100046: LP1:LeftHandThumb1
+    100048: LP1:LeftHandThumb2
+    100050: LP1:LeftHandThumb3
+    100052: LP1:LeftHandThumb4
+    100054: LP1:LeftLeg
+    100056: LP1:LeftShoulder
+    100058: LP1:LeftToe_End
+    100060: LP1:LeftToeBase
+    100062: LP1:LeftUpLeg
+    100064: LP1:Neck
+    100066: LP1:RightArm
+    100068: LP1:RightFoot
+    100070: LP1:RightForeArm
+    100072: LP1:RightHand
+    100074: LP1:RightHandIndex1
+    100076: LP1:RightHandIndex2
+    100078: LP1:RightHandIndex3
+    100080: LP1:RightHandIndex4
+    100082: LP1:RightHandMiddle1
+    100084: LP1:RightHandMiddle2
+    100086: LP1:RightHandMiddle3
+    100088: LP1:RightHandMiddle4
+    100090: LP1:RightHandPinky1
+    100092: LP1:RightHandPinky2
+    100094: LP1:RightHandPinky3
+    100096: LP1:RightHandPinky4
+    100098: LP1:RightHandRing1
+    100100: LP1:RightHandRing2
+    100102: LP1:RightHandRing3
+    100104: LP1:RightHandRing4
+    100106: LP1:RightHandThumb1
+    100108: LP1:RightHandThumb2
+    100110: LP1:RightHandThumb3
+    100112: LP1:RightHandThumb4
+    100114: LP1:RightLeg
+    100116: LP1:RightShoulder
+    100118: LP1:RightToe_End
+    100120: LP1:RightToeBase
+    100122: LP1:RightUpLeg
+    100124: LP1:Spine
+    100126: LP1:Spine1
+    100128: LP1:Spine2
+    100130: //RootNode
+    400000: LP1:Head
+    400002: LP1:HeadTop_End
+    400004: LP1:Hips
+    400006: LP1:LeftArm
+    400008: LP1:LeftFoot
+    400010: LP1:LeftForeArm
+    400012: LP1:LeftHand
+    400014: LP1:LeftHandIndex1
+    400016: LP1:LeftHandIndex2
+    400018: LP1:LeftHandIndex3
+    400020: LP1:LeftHandIndex4
+    400022: LP1:LeftHandMiddle1
+    400024: LP1:LeftHandMiddle2
+    400026: LP1:LeftHandMiddle3
+    400028: LP1:LeftHandMiddle4
+    400030: LP1:LeftHandPinky1
+    400032: LP1:LeftHandPinky2
+    400034: LP1:LeftHandPinky3
+    400036: LP1:LeftHandPinky4
+    400038: LP1:LeftHandRing1
+    400040: LP1:LeftHandRing2
+    400042: LP1:LeftHandRing3
+    400044: LP1:LeftHandRing4
+    400046: LP1:LeftHandThumb1
+    400048: LP1:LeftHandThumb2
+    400050: LP1:LeftHandThumb3
+    400052: LP1:LeftHandThumb4
+    400054: LP1:LeftLeg
+    400056: LP1:LeftShoulder
+    400058: LP1:LeftToe_End
+    400060: LP1:LeftToeBase
+    400062: LP1:LeftUpLeg
+    400064: LP1:Neck
+    400066: LP1:RightArm
+    400068: LP1:RightFoot
+    400070: LP1:RightForeArm
+    400072: LP1:RightHand
+    400074: LP1:RightHandIndex1
+    400076: LP1:RightHandIndex2
+    400078: LP1:RightHandIndex3
+    400080: LP1:RightHandIndex4
+    400082: LP1:RightHandMiddle1
+    400084: LP1:RightHandMiddle2
+    400086: LP1:RightHandMiddle3
+    400088: LP1:RightHandMiddle4
+    400090: LP1:RightHandPinky1
+    400092: LP1:RightHandPinky2
+    400094: LP1:RightHandPinky3
+    400096: LP1:RightHandPinky4
+    400098: LP1:RightHandRing1
+    400100: LP1:RightHandRing2
+    400102: LP1:RightHandRing3
+    400104: LP1:RightHandRing4
+    400106: LP1:RightHandThumb1
+    400108: LP1:RightHandThumb2
+    400110: LP1:RightHandThumb3
+    400112: LP1:RightHandThumb4
+    400114: LP1:RightLeg
+    400116: LP1:RightShoulder
+    400118: LP1:RightToe_End
+    400120: LP1:RightToeBase
+    400122: LP1:RightUpLeg
+    400124: LP1:Spine
+    400126: LP1:Spine1
+    400128: LP1:Spine2
+    400130: //RootNode
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
