@@ -90,6 +90,52 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &54544249
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.12807155
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.06223795
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.10777867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010920019408, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014177564488, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+      propertyPath: m_Name
+      value: 3d_ALL_DeadBody001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bad128fb9990476498b023b6dd548a65, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &78955510
 Prefab:
   m_ObjectHideFlags: 0
@@ -99,7 +145,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013294052572, guid: 565108155f520224a826dd18ce3752d9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000013294052572, guid: 565108155f520224a826dd18ce3752d9, type: 2}
       propertyPath: m_LocalPosition.y
