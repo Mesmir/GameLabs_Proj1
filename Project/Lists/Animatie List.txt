@@ -7,7 +7,6 @@ Animation lijst:
 		- idle animatie
 		- jump animatie
 		- animatie aan wall te hangen en af springen
-		- one ranged attack
 
 		- Ability
 			- Dash
@@ -28,18 +27,42 @@ Animation lijst:
 	Stone Rubble
 	Newspaper
 	bottles
+	
+	Texture4DeadEnemy's
 
 	Post Processing:
 
 	Lighting
-	
+	Occlusion_Culling	
 
 	overview of all the particles we need
 
 
 	Sound:
 	
-	
+	Ambience
+		Environment_BRats
+	Level_Music
+	BossFight_Music
+	MainMenu_Music
+	MainMenu_Select
+	Dmg_Taken_01
+	Dmg_Taken_02
+	Hit_01
+	Hit_02
+	HitEffect_01
+	HitEffect_02
+	Moving_01
+	Death_01
+	Death_02
+	EnemyDeathCry_01
+	EnemyDeathCry_02
+	BossTokkie_FootSteps
+	BossTokkie_Hit
+	BossTokkie_DmgTaken
+	PickUp_01
+	Ability_Dash
+	Ability_Shield
 
 
 	Scripts:
@@ -58,7 +81,7 @@ Animation lijst:
 	Jan: Main enemy/Combat enemy
 	Abilities (Dashen, shield)
 	Bosses, buiten tutorial boss
-	
+	EnvironmentScript_Bats
 	
 	Overig;
 	Verhaal schrijven
