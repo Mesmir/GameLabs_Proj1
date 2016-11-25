@@ -7,24 +7,20 @@ public class UI : MonoBehaviour {
     public Text healthPercentage;
     public Image healthOrb;
     public Image staminaBar;
-    public Image[] skillsCD;
+    public int hp;
+    public int stamina;
 
     private GameObject player;
-    public int health;
-    public int stamina;
 
     public void Awake ()
     {
         player = GameObject.FindWithTag("Player");
-        // Everything down here needs to be un-commented.
-        //health = player.GetComponent<Stats_Player>().hp;
-        //stamina = player.GetComponent<Stats_Player>().stamina;
     }
 
     void FixedUpdate ()
     {
-        healthOrb.fillAmount = (float)health / 1000; // change the 1000 if max health changes.
-        staminaBar.fillAmount = (float)stamina / 800; // change the 800 if max stamina changes.
+        healthOrb.fillAmount = (float)player.GetComponent<Stats_Player>().hp / hp;
+        staminaBar.fillAmount = (float)player.GetComponent<Stats_Player>().maxStamina / stamina;
     }
 
 }
