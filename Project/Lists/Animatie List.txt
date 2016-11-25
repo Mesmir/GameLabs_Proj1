@@ -1,20 +1,22 @@
 Animation lijst:
+	- Bat:
+
 	- Main player:
 		- 5x attacking animaties voor de player met de knife (voor combo)
 		- walking animatie
 		- idle animatie
-		- death animatie
 		- jump animatie
 		- animatie aan wall te hangen en af springen
 		- one ranged attack
+
+		- Ability
+			- Dash
+			- Shield
 
 	- Main enemy:
 		- (?) 2x attacking animaties voor de enemy met een zwaard
 			(mischien kan een player animatie hergebruikt worden)
 			(walking, idle en death animatie kan van de player worden gebruikt)
-
-	- Bat:
-		- een "animatie" van dat de bat aan het plafond hangt;
 
 	- "Tokkie" boss:
 		- walking animatie
@@ -22,10 +24,66 @@ Animation lijst:
 		- death animatie
 		- 3x attack animaties waarvan 1 een spin attack en 1 een charge attack
 
-	- High priest boss:
-		- idle animatie
-		- walking animatie
-		- animatie dat hij zijn cross in de lucht houd
-		- 1x swing met z'n cross 
-		(mischien kan een animatie van de enemy worden hergebruikt omdat we met met behulp van particles een sword willen maken 
-		(cross word de handle en "holy magic" de blade, zoek ds3 farron flashsword voor het idee)
+
+	Stone Rubble
+	Newspaper
+	bottles
+
+	Post Processing:
+
+	Lighting
+	
+
+	overview of all the particles we need
+
+
+	Sound:
+	
+	
+
+
+	Scripts:
+
+	Jans zn script optimizen
+	UI
+	Main Menu/ Ingame menu integraten
+		Main Menu Credits
+		Main Menu Option's
+		Main Menu Load Game¿
+		Save/Load
+	CheckPoint's
+	UI_Link
+	EnemyAI_Bat
+	Shader_Dissolve
+	Jan: Main enemy/Combat enemy
+	Abilities (Dashen, shield)
+	Bosses, buiten tutorial boss
+	
+	
+	Overig;
+	Verhaal schrijven
+	boss taunt script (on room enter) - Tekst voor karakters schrijven, onder andere tutorial boss?
+	Boss Room Transition
+	WallTransparency
+	
+	Jan's Dungeon Generator voor puzzle
+	TotalPlaytime
+	Co-op
+	
+
+
+
+	- Make (new) level disign sketch, making list of all the (3D) assets needed for that.
+	- Make overview of all the code we still have to make.
+	- Make overview of the sounds we need.
+	- Make overview of all the particles we need.
+	- Together with LevelDesign: location of all the enemies and puzzles.
+	 en we moeten een nieuwe asset list maken
+
+
+
+
+
+
+
+
