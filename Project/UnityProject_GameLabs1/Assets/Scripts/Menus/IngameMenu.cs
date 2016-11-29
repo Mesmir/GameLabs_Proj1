@@ -69,7 +69,6 @@ public class IngameMenu : MonoBehaviour {
     {
         if (saving)
             handler.SaveProgress();
-        handler.OnExitToMainMenu();
         //laad menu scene
     }
     public void QuitToDesktop(bool saving)
