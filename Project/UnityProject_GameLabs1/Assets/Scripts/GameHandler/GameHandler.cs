@@ -10,7 +10,6 @@ public class GameHandler : MonoBehaviour {
 
     #region References
 
-    public static bool inMenu;
     public static GameObject player;
     [Range(1, 3)]
     public int saveNumber;
@@ -24,38 +23,41 @@ public class GameHandler : MonoBehaviour {
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
-        SetupReferences();
+        SetupReferences(); //moet nog mee verder
+    }
+
+    public void OnExitToMainMenu()
+    {
+        Destroy(gameObject);
     }
 
     private void SetupReferences()
     {
-        folderPath = "/SavedDataAssets/" + fileName + saveNumber + ".xml";
-        if (!inMenu)
-            FindPlayer();
-    }
-
-    public void FindPlayer()
-    {
         StartCoroutine(FindPlayer("Player"));
+        saveNumber = PlayerPrefs.GetInt("SaveNumber");
+        folderPath = "/SavedDataAssets/" + fileName + saveNumber + ".xml";
     }
 
     #region Saving / Loading
 
     public void LoadProgress()
     {
+        bool excistingSaveFile = false;
         if (!File.Exists(Application.dataPath + folderPath))
             SaveProgress();
+        else
+            excistingSaveFile = true;
         XmlSerializer serializer = new XmlSerializer(typeof(SavedProgress));
-        FileStream stream = new FileStream(Application.dataPath + folderPath, FileMode.Open);
+        FileStream stream = new FileStream(Application.dataPath + folderPath, FileMode.Open); //wel een xml bestand klaarzetten
         savedData = (SavedProgress)serializer.Deserialize(stream) as SavedProgress;
         stream.Close();
-    }
 
-    public void LoadPlayerCombos()
-    {
-        Combat comboRef = player.GetComponent<Combat>();
-        foreach (int unlockedCombo in savedData.unlockedCombos)
-            comboRef.combos[unlockedCombo].unlocked = true;
+        if (excistingSaveFile)
+        {
+            Combat comboRef = player.GetComponent<Combat>();
+            foreach (int unlockedCombo in savedData.unlockedCombos)
+                comboRef.combos[unlockedCombo].unlocked = true;
+        }
     }
 
     public void SaveProgress()
