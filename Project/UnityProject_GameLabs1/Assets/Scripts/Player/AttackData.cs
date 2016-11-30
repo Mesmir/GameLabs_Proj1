@@ -37,6 +37,6 @@ public class AttackData : MonoBehaviour {
 
     public void ActivateParticles()
     {
-        //activeer particles, voor later niet voor deze build
+        //activeer particles, als we dat ooit nog gaan gebruiken
     }
 }

@@ -14,10 +14,7 @@ namespace Enemy
             public int drainSpeed;
             public float speed;
             public float noticeRange;
-            public EnemyAttack[] attacks;  ///sunray
-
-            public Animation idle;
-            public Animation walking;
+            public EnemyAttack[] attacks; 
         }
 
         [Serializable]
