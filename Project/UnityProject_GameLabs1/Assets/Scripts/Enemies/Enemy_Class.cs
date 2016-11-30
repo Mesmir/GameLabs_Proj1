@@ -11,7 +11,6 @@ namespace Enemy
         {
             public int hp;
             private bool drainsStamina = false; //kan met attacks op true worden gezet, sommige hebben het ook de hele tijd aan
-            public float drainRange;
             public int drainSpeed;
             public float speed;
             public float noticeRange;
@@ -24,15 +23,11 @@ namespace Enemy
         [Serializable]
         public class EnemyAttack
         {
-            public string name;
-            public bool unique;
+            public string name; //ook de naam van de state
             public int damage;
             public int damageStamina;
             public float minRange; //van hoever hij de attack kan doen, minimaal
             public float maxRange;
-            public Transform projectile;
-            public Transform projectileVector;
-            public Animation attack;
         }
     }
 }

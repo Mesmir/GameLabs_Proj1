@@ -8,17 +8,22 @@ using System.Xml.Serialization;
 
 public class GameHandler : MonoBehaviour
 {
-
     #region References
 
     public static bool inMenu;
-    public static GameObject player;
+    public GameObject player;
     [Range(1, 3)]
     public int saveNumber;
     public string fileName;
     [HideInInspector]
     public string folderPath;
     public static SavedProgress savedData;
+
+    #endregion
+
+    #region Checkpoints
+
+    GameObject[] checkpoints;
 
     #endregion
 
@@ -32,12 +37,14 @@ public class GameHandler : MonoBehaviour
     {
         folderPath = "/SavedDataAssets/" + fileName + saveNumber + ".xml";
         if (!inMenu)
-            FindPlayer();
+            SpawnPlayer();
     }
 
-    public void FindPlayer()
+    public void SpawnPlayer()
     {
-        StartCoroutine(FindPlayer("Player"));
+        checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+        Instantiate(player, checkpoints[savedData.checkpoint].transform.position, Quaternion.identity);
+        LoadPlayerCombos();
     }
 
     #region Saving / Loading
@@ -74,18 +81,6 @@ public class GameHandler : MonoBehaviour
     }
 
     #endregion
-
-    private IEnumerator FindPlayer(string tag)
-    {
-        GameObject[] matches = new GameObject[0];
-        while (matches.Length == 0)
-        {
-            matches = GameObject.FindGameObjectsWithTag(tag);
-            yield return false;
-        }
-        player = matches[0];
-        LoadProgress();
-    }
 
     #region Objects
 

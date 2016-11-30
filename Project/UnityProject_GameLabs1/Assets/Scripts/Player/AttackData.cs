@@ -3,8 +3,12 @@ using System.Collections;
 
 public class AttackData : MonoBehaviour {
 
-    public bool invincibleFrames;
-    public bool damageFrames;
+    [HideInInspector]
+    public bool invincibleFrames = false;
+    [HideInInspector]
+    public bool damageFrames = false;
+
+    public bool isPlayer; //anders enemy
     private Combat combat;
 
     private void Awake()
