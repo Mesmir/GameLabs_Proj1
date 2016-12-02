@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: cff07ec32fa562841814e78e6fe66d92
+timeCreated: 1480100965
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: arch
+    100004: bench
+    100006: ground_under_rails
+    100008: modular_room_piece
+    100010: perron_back1
+    100012: perron_front
+    100014: pilar1_front
+    100016: pilar2_back
+    100018: rail_front
+    100020: rails_Back
+    100022: roof
+    100024: wall_arch
+    100026: wall_back
+    400000: //RootNode
+    400002: arch
+    400004: bench
+    400006: ground_under_rails
+    400008: modular_room_piece
+    400010: perron_back1
+    400012: perron_front
+    400014: pilar1_front
+    400016: pilar2_back
+    400018: rail_front
+    400020: rails_Back
+    400022: roof
+    400024: wall_arch
+    400026: wall_back
+    2300000: arch
+    2300002: bench
+    2300004: ground_under_rails
+    2300006: perron_back1
+    2300008: perron_front
+    2300010: pilar1_front
+    2300012: pilar2_back
+    2300014: rail_front
+    2300016: rails_Back
+    2300018: roof
+    2300020: wall_arch
+    2300022: wall_back
+    3300000: arch
+    3300002: bench
+    3300004: ground_under_rails
+    3300006: perron_back1
+    3300008: perron_front
+    3300010: pilar1_front
+    3300012: pilar2_back
+    3300014: rail_front
+    3300016: rails_Back
+    3300018: roof
+    3300020: wall_arch
+    3300022: wall_back
+    4300000: wall_back
+    4300002: perron_back1
+    4300004: rails_Back
+    4300006: rail_front
+    4300008: ground_under_rails
+    4300010: perron_front
+    4300012: bench
+    4300014: pilar2_back
+    4300016: pilar1_front
+    4300018: wall_arch
+    4300020: roof
+    4300022: arch
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

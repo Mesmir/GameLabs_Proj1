@@ -50,7 +50,7 @@ public class IngameMenu : MonoBehaviour {
 
         #region ShowCombos
 
-        Combat combat = GameHandler.player.GetComponent<Combat>();
+        Combat combat = handler.player.GetComponent<Combat>();
         for (int x = 0; x < combat.combos.Length; x++)
         {
             string thisCombo = combat.combos[x].name + ": ";
@@ -69,7 +69,6 @@ public class IngameMenu : MonoBehaviour {
     {
         if (saving)
             handler.SaveProgress();
-        handler.OnExitToMainMenu();
         //laad menu scene
     }
     public void QuitToDesktop(bool saving)
