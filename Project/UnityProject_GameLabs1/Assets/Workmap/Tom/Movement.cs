@@ -9,7 +9,8 @@ public class Movement : MonoBehaviour {
      * "Jumpable"
     */
 
-    private bool onGround;
+    public bool onGround;
+    private RaycastHit hit;
 
     [Space(10), Header("Adjust before game starts!")]
 
@@ -49,12 +50,17 @@ public class Movement : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        Jumping();
-        Crouching();
-        Moving();
-        if (onWall)
-            TimerWallJump();
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        if (!GameObject.FindWithTag("Player").GetComponent<Player_Script>().inCombo)
+        {
+            Jumping();
+            Moving();
+            if (onGround)
+                Crouching();
+            else animatorPlayer.ResetTrigger("Idle");
+            if (onWall)
+                TimerWallJump();
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
     }
 
     public void Moving ()
@@ -65,22 +71,35 @@ public class Movement : MonoBehaviour {
         rotation = new Vector3(0, 0, 0);
         if (inputAxis >= 0.1)
         {
-            animatorPlayer.SetBool("Moving", true);
+            if (!onGround)
+                animatorPlayer.SetBool("Moving", false);
+            else
+            {
+                animatorPlayer.SetBool("Moving", true);
+                animatorPlayer.ResetTrigger("Idle");
+            }
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis <= -0.1)
         {
-            animatorPlayer.SetBool("Moving", true);
+            if (!onGround)
+                animatorPlayer.SetBool("Moving", false);
+            else
+            {
+                animatorPlayer.SetBool("Moving", true);
+                animatorPlayer.ResetTrigger("Idle");
+            }
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
         {
-            //animatorPlayer.SetTrigger("Idle");
             animatorPlayer.SetBool("Moving", false);
+            if(onGround)
+                animatorPlayer.SetTrigger("Idle");
         }
     }
 
@@ -94,19 +113,18 @@ public class Movement : MonoBehaviour {
             crouching = false;
         if (crouching == true)
         {
-            if(crouchColliderHeight == 0)
+            if (crouchColliderHeight == 0)
                 crouchColliderHeight = colliderHeight / 2;
             positionCollider = new Vector3(0f, (crouchColliderHeight / 2), 0f);
             GetComponent<CapsuleCollider>().height = crouchColliderHeight;
             GetComponent<CapsuleCollider>().center = positionCollider;
         }
         else
-            if (!Physics.Raycast(transform.position, transform.up, colliderHeight) && !Input.GetButton("Crouch"))
-            {
-                positionCollider = new Vector3(0f, (colliderHeight / 2), 0f);
-                GetComponent<CapsuleCollider>().height = colliderHeight;
-                GetComponent<CapsuleCollider>().center = positionCollider;
-            }
+        {
+            positionCollider = new Vector3(0f, (colliderHeight / 2), 0f);
+            GetComponent<CapsuleCollider>().height = colliderHeight;
+            GetComponent<CapsuleCollider>().center = positionCollider;
+        }
     }
 
     public void Jumping ()
@@ -123,7 +141,7 @@ public class Movement : MonoBehaviour {
                         onWall = false;
                         wST = wallStickTime;
                     }
-                    animatorPlayer.SetTrigger("Jumping");
+                    else animatorPlayer.SetTrigger("Jumping");
                     rigidbodyPlayer.velocity = Vector3.zero;
                     rigidbodyPlayer.AddForce(transform.up * (jumpHeight * 100));
                 }
@@ -137,7 +155,6 @@ public class Movement : MonoBehaviour {
         {
             onWall = false;
             rigidbodyPlayer.useGravity = true;
-            wST = wallStickTime;
         }
     }
 
@@ -146,17 +163,32 @@ public class Movement : MonoBehaviour {
         if(!onGround)
             if (enter.collider.tag == "Jumpable")
             {
-                onWall = true;
-                rigidbodyPlayer.velocity = Vector3.zero;
-                rigidbodyPlayer.useGravity = false;
-                if (jumps <= maxJumps)
-                    jumps++;
+                    onWall = true;
+                    rigidbodyPlayer.velocity = Vector3.zero;
+                    rigidbodyPlayer.useGravity = false;
+                    animatorPlayer.Play("Wall Jump", -1, 0.0f);
+                    animatorPlayer.speed = 0;
+                    if (jumps <= maxJumps)
+                        jumps++;
             }
         if (enter.collider.tag == "Ground")
         {
             jumps = maxJumps;
             onGround = true;
+            animatorPlayer.ResetTrigger("Jumping");
         }
+    }
+
+    void OnCollisionStay(Collision stay)
+    {
+        if (stay.collider.tag == "Jumpable")
+            if (wST <= 0)
+                if (!onWall)
+                {
+                    animatorPlayer.speed = 1;
+                    animatorPlayer.Play("Jump", -1, 1.0f);
+                    wST = wallStickTime;
+                }
     }
 
     void OnCollisionExit (Collision exit)
@@ -168,6 +200,10 @@ public class Movement : MonoBehaviour {
             onWall = false;
             rigidbodyPlayer.useGravity = true;
             wST = wallStickTime;
+            animatorPlayer.speed = 1;
+            animatorPlayer.Play("Jump", -1, 0.1f);
+            if(wST <= 0)
+                wST = wallStickTime;
         }
     }
 }
