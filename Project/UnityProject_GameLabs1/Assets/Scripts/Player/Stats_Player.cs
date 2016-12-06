@@ -49,6 +49,23 @@ public class Stats_Player : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
+    {
+        if (x.transform.tag == "Enemy")
+        {
+            Transform enemy = x.transform;
+            IEnemy i = (IEnemy)GetComponent(typeof(IEnemy));
+            AttackData a = enemy.GetComponent<AttackData>();
+
+            if (i.GetState() == EnemyBase.State.Attack)
+                if (a.damageFrames)
+                {
+                    a.damageFrames = false;
+                    hp -= i.GetAttackDamage();
+                }
+        }
+    }
+
     #endregion
 
     #region Stamina
