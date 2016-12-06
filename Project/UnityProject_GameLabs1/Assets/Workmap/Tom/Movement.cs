@@ -86,8 +86,8 @@ public class Movement : MonoBehaviour {
                 animatorPlayer.SetBool("Moving", true);
                 animatorPlayer.ResetTrigger("Idle");
             }
-            transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
-            rotation.y = 90;
+            transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
+            rotation.y = 270;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis <= -0.1)
@@ -99,8 +99,8 @@ public class Movement : MonoBehaviour {
                 animatorPlayer.SetBool("Moving", true);
                 animatorPlayer.ResetTrigger("Idle");
             }
-            transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
-            rotation.y = 270;
+            transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
+            rotation.y = 90;
             transform.eulerAngles = rotation;
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
