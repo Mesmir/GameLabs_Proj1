@@ -8,6 +8,7 @@ public class Combat : MonoBehaviour {
     public enum CharacterStatus {Available, Moving, Comboing, Unavailable }
     public CharacterStatus currentStatus;
     private Animator anim;
+    private AttackData attackData;
 
     #region ComboData
 
@@ -28,6 +29,7 @@ public class Combat : MonoBehaviour {
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        attackData = GetComponent<AttackData>();
         timer = comboSpeedInput;
     }
 
@@ -98,6 +100,7 @@ public class Combat : MonoBehaviour {
     {
         curCombo.Clear();
         timer = comboSpeedInput;
+        attackData.damageFrames = false;
         currentStatus = CharacterStatus.Available;
     }
 
