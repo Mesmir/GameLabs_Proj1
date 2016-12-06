@@ -12,11 +12,17 @@ public class Movement : MonoBehaviour {
     public bool onGround;
     private RaycastHit hit;
 
+    #region Variables that have to be adjusted BEFORE playing
+
     [Space(10), Header("Adjust before game starts!")]
 
     public Animator animatorPlayer;
 
     private Rigidbody rigidbodyPlayer;
+
+    #endregion
+
+    #region Variables that can be adjusted WHILE playing
 
     [Space(10), Header("Adjustments can be made while playing!")]
 
@@ -36,6 +42,8 @@ public class Movement : MonoBehaviour {
     public float wallStickTime;
     private float wST;
     private bool onWall;
+
+    #endregion
 
     void Awake ()
     {
