@@ -8,8 +8,8 @@ public class CameraMovement : MonoBehaviour
     public Transform player;
     //public Transform rightBorder;
     //public Transform leftBorder;
-    public bool mayMoveRight;
-    public bool mayMoveLeft;
+    //public bool mayMoveRight;
+    //public bool mayMoveLeft;
     public Camera camera;
 
     public float LookSpeed;
@@ -25,7 +25,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         Quaternion rot = Quaternion.LookRotation(direction);
         rot.z = 0.0f;
-        rot.y = 180.0f;
+        rot.y = 0.0f;
         transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
 
         if (player.position.y > transform.position.y + 2 || player.position.y < transform.position.y)
