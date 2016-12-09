@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4291565518993670}
   - component: {fileID: 33933636429088622}
   - component: {fileID: 23357605968246580}
+  - component: {fileID: 65604167412814328}
   m_Layer: 0
   m_Name: small wall
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127633155563226}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.9, y: 4.95, z: 1.64}
-  m_LocalScale: {x: 0.05874276, y: 1.1643904, z: 1.0000005}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -2.8940787, y: 0, z: -0.39000034}
+  m_LocalScale: {x: 0.13340156, y: 1, z: 17.024183}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: 180, y: -90, z: 0}
 --- !u!23 &23357605968246580
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -79,3 +80,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127633155563226}
   m_Mesh: {fileID: 4300000, guid: cff07ec32fa562841814e78e6fe66d92, type: 3}
+--- !u!65 &65604167412814328
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127633155563226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.8527455, y: 3.6461055, z: 6.497851e-16}
+  m_Center: {x: 0.00000047683716, y: 1.8230528, z: 0}
