@@ -197,6 +197,8 @@ public class Movement : MonoBehaviour {
                     animatorPlayer.Play("Jump", -1, 1.0f);
                     wST = wallStickTime;
                 }
+        if (stay.collider.tag == "Ground")
+            onGround = true;
     }
 
     void OnCollisionExit (Collision exit)
