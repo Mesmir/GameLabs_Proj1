@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AttackData), typeof(Animator))]
 public class EnemyBase : MonoBehaviour, IEnemy {
@@ -20,6 +21,52 @@ public class EnemyBase : MonoBehaviour, IEnemy {
     public int currentCombo;
 
     #endregion
+
+    #endregion
+
+    #region Base AI Behaviour
+
+    public virtual void Update()
+    {
+        if(currentState == State.Walk)
+        {
+            RaycastHit hit;
+            Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            if (Physics.Raycast(transform.position, fwd, out hit, stats.noticeRange))
+                if (hit.transform.tag == "Player") {
+                    float dis = Vector3.Distance(transform.position, hit.transform.position);
+                    if (dis < stats.attackRange)
+                    {
+                        #region Attack Player
+
+                        List<int> attacks = new List<int>();
+                        for (int attack = 0; attack < stats.attacks.Length; attack++)
+                        {
+                            Enemy.Enemy_Class.EnemyAttack curAttack = stats.attacks[attack];
+                            if (dis < curAttack.maxRange && dis > curAttack.minRange)
+                                attacks.Add(attack);
+                        }
+
+                        #region Choose Attack
+
+                        int chosenAttack = Random.Range(0, attacks.Count);
+                        Attack(attacks[chosenAttack]);
+
+                        #endregion
+
+                        #endregion
+                    }
+                    else
+                    {
+                        #region Move Towards Player
+
+                        transform.Translate(transform.forward * (stats.speed * Time.deltaTime));
+
+                        #endregion
+                    }
+                }
+        }
+    }
 
     #endregion
 
