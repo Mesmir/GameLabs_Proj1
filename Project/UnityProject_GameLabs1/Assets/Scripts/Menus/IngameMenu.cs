@@ -3,11 +3,14 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
+//Edit's Renzo; Using Scenemanagement en QuitToMenu aangevuld;
 
 [RequireComponent(typeof(GameHandler))]
 public class IngameMenu : MonoBehaviour {
 
-    private GameMenu menu;
+    public GameMenu menu;
     private GameHandler handler;
 
     #region InspectorSettings
@@ -70,6 +73,8 @@ public class IngameMenu : MonoBehaviour {
         if (saving)
             handler.SaveProgress();
         //laad menu scene
+        SceneManager.LoadSceneAsync(0);
+        GameObject.Find("Canvas").SetActive(false); //temoporary ugly solution
     }
     public void QuitToDesktop(bool saving)
     {
