@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour
         Quaternion rot = Quaternion.LookRotation(direction);
         rot.z = 0.0f;
         rot.y = 0.0f;
-        transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
+        ///transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
 
         if (player.position.y > transform.position.y + 2 || player.position.y < transform.position.y)
         {
