@@ -1292,7 +1292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &343472020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1012833541}
   saveNumber: 1
-  fileName: 1
+  fileName: Save0
   folderPath: 
 --- !u!1 &373554471
 GameObject:
@@ -5032,7 +5032,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244661538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.35, y: 1.05, z: 0.28649163}
+  m_LocalPosition: {x: -11.09, y: 1.05, z: 0.28649163}
   m_LocalScale: {x: 0.1, y: 1, z: 0.1}
   m_Children:
   - {fileID: 574346839}
@@ -7664,6 +7664,52 @@ Transform:
   m_Father: {fileID: 2051720561}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1853861057 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014205814630, guid: 446701983a148a8409c6f14fb02dfa94,
+    type: 2}
+  m_PrefabInternal: {fileID: 1382771177}
+--- !u!114 &1853861060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853861057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ee2155d97e1ef4fb4bc95a77057ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    hp: 50
+    drainSpeed: 10
+    speed: 5
+    noticeRange: 50
+    attackRange: 5
+    attacks:
+    - name: Attack1
+      damage: 20
+      damageStamina: 10
+      minRange: 1
+      maxRange: 5
+  walkStateName: WalkE
+  deathStateName: DeathE
+  currentState: 1
+  currentCombo: 0
+--- !u!114 &1853861061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853861057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a32db607e4992a4aa820de1177e4835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibleFrames: 0
+  damageFrames: 0
+  isPlayer: 0
 --- !u!1 &1854579345
 GameObject:
   m_ObjectHideFlags: 0

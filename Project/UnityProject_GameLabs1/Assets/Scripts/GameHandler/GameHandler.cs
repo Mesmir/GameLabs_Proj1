@@ -44,6 +44,8 @@ public class GameHandler : MonoBehaviour
     public void SpawnPlayer()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+        Checkpoint.gHandler = this;
+
         LoadProgress();
         Instantiate(player, checkpoints[savedData.checkpoint].transform.position, Quaternion.identity);
         LoadPlayerCombos();

@@ -5,6 +5,7 @@ using System.Collections;
 public class Checkpoint : MonoBehaviour {
 
     public CheckPointData thisCheckPoint;
+    public static GameHandler gHandler;
 
     private void OnTriggerEnter(Collider x)
     {
@@ -16,6 +17,7 @@ public class Checkpoint : MonoBehaviour {
     {
         GameHandler.savedData.level = thisCheckPoint.checkPoint;
         GameHandler.savedData.level = thisCheckPoint.level;
+        gHandler.SaveProgress();
     }
 
     [Serializable]
