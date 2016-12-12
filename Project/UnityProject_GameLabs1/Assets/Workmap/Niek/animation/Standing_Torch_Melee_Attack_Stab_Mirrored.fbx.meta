@@ -159,7 +159,174 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: EndCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LP1:Hips
+        weight: 1
+      - path: LP1:Hips/LP1:LeftUpLeg
+        weight: 1
+      - path: LP1:Hips/LP1:LeftUpLeg/LP1:LeftLeg
+        weight: 1
+      - path: LP1:Hips/LP1:LeftUpLeg/LP1:LeftLeg/LP1:LeftFoot
+        weight: 1
+      - path: LP1:Hips/LP1:LeftUpLeg/LP1:LeftLeg/LP1:LeftFoot/LP1:LeftToeBase
+        weight: 1
+      - path: LP1:Hips/LP1:LeftUpLeg/LP1:LeftLeg/LP1:LeftFoot/LP1:LeftToeBase/LP1:LeftToe_End
+        weight: 1
+      - path: LP1:Hips/LP1:RightUpLeg
+        weight: 1
+      - path: LP1:Hips/LP1:RightUpLeg/LP1:RightLeg
+        weight: 1
+      - path: LP1:Hips/LP1:RightUpLeg/LP1:RightLeg/LP1:RightFoot
+        weight: 1
+      - path: LP1:Hips/LP1:RightUpLeg/LP1:RightLeg/LP1:RightFoot/LP1:RightToeBase
+        weight: 1
+      - path: LP1:Hips/LP1:RightUpLeg/LP1:RightLeg/LP1:RightFoot/LP1:RightToeBase/LP1:RightToe_End
+        weight: 1
+      - path: LP1:Hips/LP1:Spine
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandIndex1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandIndex1/LP1:LeftHandIndex2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandIndex1/LP1:LeftHandIndex2/LP1:LeftHandIndex3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandIndex1/LP1:LeftHandIndex2/LP1:LeftHandIndex3/LP1:LeftHandIndex4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandMiddle1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandMiddle1/LP1:LeftHandMiddle2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandMiddle1/LP1:LeftHandMiddle2/LP1:LeftHandMiddle3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandMiddle1/LP1:LeftHandMiddle2/LP1:LeftHandMiddle3/LP1:LeftHandMiddle4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandPinky1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandPinky1/LP1:LeftHandPinky2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandPinky1/LP1:LeftHandPinky2/LP1:LeftHandPinky3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandPinky1/LP1:LeftHandPinky2/LP1:LeftHandPinky3/LP1:LeftHandPinky4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandRing1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandRing1/LP1:LeftHandRing2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandRing1/LP1:LeftHandRing2/LP1:LeftHandRing3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandRing1/LP1:LeftHandRing2/LP1:LeftHandRing3/LP1:LeftHandRing4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandThumb1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandThumb1/LP1:LeftHandThumb2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandThumb1/LP1:LeftHandThumb2/LP1:LeftHandThumb3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:LeftShoulder/LP1:LeftArm/LP1:LeftForeArm/LP1:LeftHand/LP1:LeftHandThumb1/LP1:LeftHandThumb2/LP1:LeftHandThumb3/LP1:LeftHandThumb4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:Neck
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:Neck/LP1:Head
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:Neck/LP1:Head/LP1:HeadTop_End
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandIndex1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandIndex1/LP1:RightHandIndex2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandIndex1/LP1:RightHandIndex2/LP1:RightHandIndex3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandIndex1/LP1:RightHandIndex2/LP1:RightHandIndex3/LP1:RightHandIndex4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandMiddle1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandMiddle1/LP1:RightHandMiddle2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandMiddle1/LP1:RightHandMiddle2/LP1:RightHandMiddle3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandMiddle1/LP1:RightHandMiddle2/LP1:RightHandMiddle3/LP1:RightHandMiddle4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandPinky1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandPinky1/LP1:RightHandPinky2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandPinky1/LP1:RightHandPinky2/LP1:RightHandPinky3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandPinky1/LP1:RightHandPinky2/LP1:RightHandPinky3/LP1:RightHandPinky4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandRing1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandRing1/LP1:RightHandRing2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandRing1/LP1:RightHandRing2/LP1:RightHandRing3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandRing1/LP1:RightHandRing2/LP1:RightHandRing3/LP1:RightHandRing4
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandThumb1
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandThumb1/LP1:RightHandThumb2
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandThumb1/LP1:RightHandThumb2/LP1:RightHandThumb3
+        weight: 1
+      - path: LP1:Hips/LP1:Spine/LP1:Spine1/LP1:Spine2/LP1:RightShoulder/LP1:RightArm/LP1:RightForeArm/LP1:RightHand/LP1:RightHandThumb1/LP1:RightHandThumb2/LP1:RightHandThumb3/LP1:RightHandThumb4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -185,6 +352,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -195,7 +363,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

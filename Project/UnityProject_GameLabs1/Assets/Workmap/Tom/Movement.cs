@@ -43,10 +43,13 @@ public class Movement : MonoBehaviour {
     private float wST;
     private bool onWall;
 
+    private Combat combat;
+
     #endregion
 
     void Awake ()
     {
+        combat = GetComponent<Combat>();
         rigidbodyPlayer = GetComponent<Rigidbody>();
         wST = wallStickTime;
         jumps = maxJumps;
@@ -58,7 +61,9 @@ public class Movement : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        if (!GameObject.FindWithTag("Player").GetComponent<Player_Script>().inCombo)
+        if (combat.currentStatus == Combat.CharacterStatus.Available || 
+            combat.currentStatus == Combat.CharacterStatus.Moving ||
+            combat.currentStatus == Combat.CharacterStatus.Unavailable)
         {
             Jumping();
             Moving();
@@ -143,6 +148,7 @@ public class Movement : MonoBehaviour {
                 if (jumps > 0)
                 {
                     jumps--;
+                    combat.currentStatus = Combat.CharacterStatus.Unavailable;
                     if (onWall)
                     {
                         rigidbodyPlayer.useGravity = true;
@@ -177,13 +183,16 @@ public class Movement : MonoBehaviour {
                     animatorPlayer.Play("Wall Jump", -1, 0.0f);
                     animatorPlayer.speed = 0;
                     if (jumps <= maxJumps)
-                        jumps++;
+                        jumps = maxJumps;
             }
         if (enter.collider.tag == "Ground")
         {
+            combat.currentStatus = Combat.CharacterStatus.Available;
             jumps = maxJumps;
             onGround = true;
             animatorPlayer.ResetTrigger("Jumping");
+            animatorPlayer.speed = 1;
+            animatorPlayer.Play("Idle", -1, 0.0f);
         }
     }
 
@@ -193,8 +202,12 @@ public class Movement : MonoBehaviour {
             if (wST <= 0)
                 if (!onWall)
                 {
-                    animatorPlayer.speed = 1;
-                    animatorPlayer.Play("Jump", -1, 1.0f);
+                    if (!onGround)
+                    {
+                        animatorPlayer.Play("Wall Jump", -1, 0.0f);
+                        animatorPlayer.speed = 0;
+                    }
+                    else animatorPlayer.speed = 1;
                     wST = wallStickTime;
                 }
         if (stay.collider.tag == "Ground")
@@ -211,7 +224,8 @@ public class Movement : MonoBehaviour {
             rigidbodyPlayer.useGravity = true;
             wST = wallStickTime;
             animatorPlayer.speed = 1;
-            animatorPlayer.Play("Jump", -1, 0.1f);
+            if(!onGround)
+                animatorPlayer.Play("Jump", -1, 0.1f);
             if(wST <= 0)
                 wST = wallStickTime;
         }
