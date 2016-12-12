@@ -14,6 +14,7 @@ namespace Enemy
             public int drainSpeed;
             public float speed;
             public float noticeRange;
+            public float attackRange;
             public EnemyAttack[] attacks; 
         }
 

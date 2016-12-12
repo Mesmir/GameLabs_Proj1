@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013237690418}
   - component: {fileID: 108000011372748222}
+  - component: {fileID: 114606031135070636}
   m_Layer: 0
   m_Name: lamp_light
   m_TagString: Untagged
@@ -96,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012940218418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.72, y: -1.621, z: 14.39}
+  m_LocalPosition: {x: -0.92, y: 2.69, z: 17.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013125624610}
@@ -241,3 +242,20 @@ Light:
   m_BounceIntensity: 1.67
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114606031135070636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013819035978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c61539a35141d4468a0a76fdb9a10de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lt: {fileID: 108000011372748222}
+  normalLightIntensity: 1.91
+  blinkLightIntensity: 1.1
+  minSpeedBlink: 2
+  maxSpeedBlink: 3
+  enabled: 1
