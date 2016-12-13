@@ -136,7 +136,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                 if (a.damageFrames)
                 {
                     a.damageFrames = false;
-                    stats.hp -= c.combos[c.currentCombo].damage;
+                    ChangeHP(-c.combos[c.currentCombo].damage);
                 }
         }   
     }
