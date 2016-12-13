@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 03b7aef02fd112249bd879e188cde3c4
-timeCreated: 1481379255
+timeCreated: 1481637486
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -161,7 +161,7 @@ SubstanceImporter:
           name: _BumpMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 2, y: 2}
           offset: {x: 0, y: 0}
       - first:
           name: _DetailAlbedoMap
@@ -197,19 +197,19 @@ SubstanceImporter:
           name: _MetallicGlossMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 2, y: 2}
           offset: {x: 0, y: 0}
       - first:
           name: _OcclusionMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 2, y: 2}
           offset: {x: 0, y: 0}
       - first:
           name: _ParallaxMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 2, y: 2}
           offset: {x: 0, y: 0}
       floats:
       - first:
@@ -226,7 +226,7 @@ SubstanceImporter:
         second: 0
       - first:
           name: _GlossMapScale
-        second: 1
+        second: 0.524
       - first:
           name: _Glossiness
         second: 0.5
@@ -267,6 +267,9 @@ SubstanceImporter:
       - first:
           name: _EmissionColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      - first:
+          name: _SpecColor
+        second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     textureParameters:
     - name: bricks_basecolor
       alphaSource: 6
