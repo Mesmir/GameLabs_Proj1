@@ -3,12 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
-
-    public Text healthPercentage;
+    
     public Image healthOrb;
     public Image staminaBar;
-    public int hp;
-    public int stamina;
 
     private GameObject player;
 
@@ -19,8 +16,8 @@ public class UI : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        healthOrb.fillAmount = (float)player.GetComponent<Stats_Player>().hp / hp;
-        staminaBar.fillAmount = (float)player.GetComponent<Stats_Player>().maxStamina / stamina;
+        healthOrb.fillAmount = (float)player.GetComponent<Stats_Player>().hp / 1000;
+        staminaBar.fillAmount = (float)player.GetComponent<Stats_Player>().maxStamina / 1000;
     }
 
 }
