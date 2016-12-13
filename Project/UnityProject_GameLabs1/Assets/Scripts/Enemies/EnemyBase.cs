@@ -33,7 +33,9 @@ public class EnemyBase : MonoBehaviour, IEnemy {
             RaycastHit hit;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
             if (Physics.Raycast(transform.position, fwd, out hit, stats.noticeRange))
-                if (hit.transform.tag == "Player") {
+            {
+                if (hit.transform.tag == "Player")
+                {
                     float dis = Vector3.Distance(transform.position, hit.transform.position);
                     if (dis < stats.attackRange)
                     {
@@ -65,6 +67,18 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                         #endregion
                     }
                 }
+            }
+            else {
+                fwd = transform.TransformDirection(-Vector3.forward);
+                if (Physics.Raycast(transform.position, fwd, out hit, stats.noticeRange))
+                    if(hit.transform.tag == "Player")
+                    {
+                        //rotate, hierna kan hij gewoon zn normale script volgen
+                        Quaternion newRot = transform.rotation;
+                        newRot.y += 180;
+                        transform.rotation = newRot;
+                    }
+            }
         }
     }
 
@@ -122,7 +136,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                 if (a.damageFrames)
                 {
                     a.damageFrames = false;
-                    stats.hp -= c.combos[c.currentCombo].damage;
+                    ChangeHP(-c.combos[c.currentCombo].damage);
                 }
         }   
     }
