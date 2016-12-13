@@ -12,6 +12,7 @@ public class GameHandler : MonoBehaviour
 
     public static bool inMenu;
     public GameObject player;
+    public static GameObject _Player;
     [Range(1, 3)]
     public int saveNumber;
     public string fileName;
@@ -47,7 +48,7 @@ public class GameHandler : MonoBehaviour
         Checkpoint.gHandler = this;
 
         LoadProgress();
-        Instantiate(player, checkpoints[savedData.checkpoint].transform.position, Quaternion.identity);
+        _Player = Instantiate(player, checkpoints[savedData.checkpoint].transform.position, Quaternion.identity);
         LoadPlayerCombos();
     }
 

@@ -9,7 +9,7 @@ public class UI : MonoBehaviour {
 
     private GameObject player;
 
-    public void Awake ()
+    public void Start ()
     {
         player = GameObject.FindWithTag("Player");
     }
