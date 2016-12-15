@@ -15,7 +15,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
     public string deathStateName;
 
     public enum State {Walk, Attack }
-    public State currentState = State.Walk;
+    private State currentState = State.Walk;
 
     [HideInInspector]
     public int currentCombo;
@@ -30,7 +30,16 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     public virtual void Update()
     {
-        if(currentState == State.Walk)
+        Move();
+    }
+
+    #endregion
+
+    #region Move
+
+    private void Move()
+    {
+        if (currentState == State.Walk)
         {
             RaycastHit hit;
             Vector3 playerPos = GameHandler._Player.transform.position;
@@ -41,16 +50,18 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                 print(hit.transform.tag);
                 if (hit.collider.tag == "Player")
                 {
+                    #region Check If Right Rotation
+
                     if ((looksRight && hit.transform.position.x < transform.position.x) ||
                         (!looksRight && hit.transform.position.x > transform.position.x))
                     {
-                        //rotate, hierna kan hij gewoon zn normale script volgen
-                        Quaternion newRot = transform.rotation;
-                        newRot.y += 180;
+                        Quaternion newRot = Quaternion.LookRotation(-transform.forward, Vector3.up);
                         transform.rotation = newRot;
                         looksRight = !looksRight;
                     }
 
+                    #endregion
+                    
                     float dis = Vector3.Distance(transform.position, hit.transform.position);
                     if (dis < stats.attackRange)
                     {
@@ -71,6 +82,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
                         int chosenAttack = Random.Range(0, attacks.Count);
                         Attack(attacks[chosenAttack]);
+
                         #endregion
 
                         #endregion
@@ -79,32 +91,17 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                     {
                         #region Move Towards Player
 
-                        transform.Translate(transform.forward * (stats.speed * Time.deltaTime));
+                        transform.Translate(transform.forward * (stats.speed * Time.deltaTime), Space.World);
 
                         #endregion
                     }
+                    
                 }
             }
         }
     }
 
     #endregion
-
-    public virtual void Walk(bool right)
-    {
-        int modifier = 1;
-        Quaternion rotation = transform.rotation;
-        if (right)
-        {
-            rotation.y = 90;
-            modifier = -1;
-        }
-        else
-            rotation.y = -90;
-        transform.rotation = rotation;
-        transform.Translate(Vector3.left * modifier * Time.deltaTime);
-        anim.SetBool(walkStateName, true);
-    }
 
     protected string currentAttack;
 
