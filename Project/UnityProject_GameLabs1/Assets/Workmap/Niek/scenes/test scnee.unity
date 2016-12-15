@@ -659,44 +659,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalPosition.x
       value: 9.62
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.94
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalPosition.z
       value: 4.157643
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+    - target: {fileID: 4134874544561958, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: da3dc44b4c38e6843b5b0464aa0af581, type: 2}
+    - target: {fileID: 1917407339297584, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
+      propertyPath: m_Name
+      value: boxing platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9e33ab72a7177d14394f564e068abeab, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: bc2a7d7725bfb7d43ac6f9350bb5bcc2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1728807908
 Prefab:
