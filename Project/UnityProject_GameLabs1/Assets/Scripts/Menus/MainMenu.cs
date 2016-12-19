@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public int lastSaveFile = 1;
     public string[] levelNames;
     public GameObject loadGame;
+    public GameObject credits;
 
     #region Selected Save Data
 
@@ -21,9 +22,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(levelNames[0], LoadSceneMode.Single);
     }
 
+    #region Load Game
+
     public void LoadGame(bool setActive)
     {
-        //maak een object in een dropdown menu voor elke save
+        //maakt een object in een dropdown menu voor elke save
         loadGame.SetActive(setActive);
     }
 
@@ -32,6 +35,13 @@ public class MainMenu : MonoBehaviour
         //laad save
         GameHandler.inMenu = false;
         SceneManager.LoadScene(levelNames[chosenSaveFile], LoadSceneMode.Single);
+    }
+
+    #endregion
+
+    public void Credits(bool setActive)
+    {
+        credits.SetActive(setActive);
     }
 
     public void Exit()
