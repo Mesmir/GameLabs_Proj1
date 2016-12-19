@@ -29,7 +29,8 @@
 			float2 uv_Metallic;
 			float2 uv_Glossiness;
 			float2 uv_Height;
-		};
+		};	
+
 		half _Amount;
 		half _MetaSlider;
 		half _GlosSlider;
@@ -38,16 +39,15 @@
 
 		void vert(inout appdata_full v)
 		{
+			//fixed4 h = tex2D(_Height, v.uv_Height);
 			v.vertex.xyz += v.normal * _Amount;
 		}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
-			fixed4 m = tex2D(_Metallic, IN.uv_Metallic);
-			o.Metallic = m * _MetaSlider;
-			fixed4 g = tex2D(_Glossiness, IN.uv_Glossiness);
-			o.Smoothness = g * _GlosSlider;
+			o.Metallic = tex2D(_Metallic, IN.uv_Metallic) * _MetaSlider;
+			o.Smoothness = tex2D(_Glossiness, IN.uv_Glossiness) * _GlosSlider;
 			o.Alpha = _Alpha;
 		}
 		ENDCG
