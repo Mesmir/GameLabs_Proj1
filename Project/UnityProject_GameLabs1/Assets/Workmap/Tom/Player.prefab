@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 114865423606107590}
   - component: {fileID: 114140921367319618}
   - component: {fileID: 114208971230640044}
-  - component: {fileID: 114014185616283710}
+  - component: {fileID: 136802122433017320}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1956,15 +1956,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.32, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.91, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366115527286232}
   - {fileID: 4484617998556480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4956338148888284
 Transform:
   m_ObjectHideFlags: 1
@@ -2092,21 +2092,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114014185616283710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1705733606126360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58615e21d235e6444996aa25c07aac46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inCombo: 0
-  comboKeys: []
-  comboSpeedInput: 0
-  combos: []
 --- !u!114 &114111294905390110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2126,11 +2111,13 @@ MonoBehaviour:
   - CB4
   comboSpeedInput: 0.68
   combos:
-  - name: Thrust
+  - name: Slash00
     unlocked: 1
     damage: 40
     comboString:
     - CB1
+    - CB1
+    - CB3
     staminaCost: 100
     damageAreas:
     - {fileID: 1638090089617806}
@@ -2138,10 +2125,11 @@ MonoBehaviour:
     isRanged: 0
     projectile: {fileID: 0}
     projectileVector: {fileID: 0}
-  - name: Slashes
+  - name: Slash01
     unlocked: 1
     damage: 150
     comboString:
+    - CB1
     - CB2
     staminaCost: 200
     damageAreas:
@@ -2150,31 +2138,7 @@ MonoBehaviour:
     isRanged: 0
     projectile: {fileID: 0}
     projectileVector: {fileID: 0}
-  - name: Spin
-    unlocked: 1
-    damage: 150
-    comboString:
-    - CB3
-    staminaCost: 200
-    damageAreas:
-    - {fileID: 1638090089617806}
-    particles: []
-    isRanged: 0
-    projectile: {fileID: 0}
-    projectileVector: {fileID: 0}
-  - name: Stab
-    unlocked: 1
-    damage: 150
-    comboString:
-    - CB4
-    staminaCost: 200
-    damageAreas:
-    - {fileID: 1638090089617806}
-    particles: []
-    isRanged: 0
-    projectile: {fileID: 0}
-    projectileVector: {fileID: 0}
-  currentCombo: 0
+  currentCombo: 2
 --- !u!114 &114140921367319618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2188,7 +2152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invincibleFrames: 0
   damageFrames: 0
-  isPlayer: 0
+  isPlayer: 1
 --- !u!114 &114208971230640044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2203,9 +2167,9 @@ MonoBehaviour:
   onGround: 0
   animatorPlayer: {fileID: 95663382468956200}
   movementSpeed: 3
-  jumpHeight: 2.5
-  maxJumps: 1
-  colliderHeight: 1.9
+  jumpHeight: 3
+  maxJumps: 3
+  colliderHeight: 1.8
   crouchColliderHeight: 0
   wallStickTime: 0.3
 --- !u!114 &114865423606107590
@@ -2219,9 +2183,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714c976e80dd55f4fa5a9acc8c3175dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaLevels: []
-  hp: 1000
-  maxStamina: 1000
+  staminaLevels:
+  - name: 
+    staminaLevel: 0
+    unlockedCombos: 
+  - name: 
+    staminaLevel: 0
+    unlockedCombos: 
+  hp: 509
+  maxStamina: 732
   lossStaminaPerSec: 3
 --- !u!136 &136283835999428750
 CapsuleCollider:
@@ -2231,11 +2201,24 @@ CapsuleCollider:
   m_GameObject: {fileID: 1705733606126360}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.3
   m_Height: 1.9
   m_Direction: 1
   m_Center: {x: 0, y: 0.95, z: 0}
+--- !u!136 &136802122433017320
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705733606126360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.62
+  m_Height: 1.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!137 &137528577481338084
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
