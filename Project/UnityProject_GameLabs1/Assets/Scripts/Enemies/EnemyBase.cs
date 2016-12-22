@@ -28,7 +28,12 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     #region Base AI Behaviour
 
-    public virtual void Update()
+    protected virtual void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    protected virtual void Update()
     {
         Move();
     }
