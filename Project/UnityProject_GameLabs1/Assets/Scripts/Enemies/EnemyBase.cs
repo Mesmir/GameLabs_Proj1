@@ -5,6 +5,11 @@ using System.Collections.Generic;
 [RequireComponent(typeof(AttackData), typeof(Animator))]
 public class EnemyBase : MonoBehaviour, IEnemy {
 
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     #region References
     public Enemy.Enemy_Class.Enemy stats;
     private Animator anim;
