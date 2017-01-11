@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: TestMaterial
-  m_Shader: {fileID: 4800000, guid: 0a4b0bce1e250a14bb534d70bce205fa, type: 3}
+  m_Shader: {fileID: 4800000, guid: e219adf084bf66e4d9bbac273ecf9348, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -102,10 +102,10 @@ Material:
     m_Floats:
     - first:
         name: _Alpha
-      second: 0.398
+      second: 1
     - first:
         name: _Amount
-      second: 0
+      second: 0.182
     - first:
         name: _BumpScale
       second: 1

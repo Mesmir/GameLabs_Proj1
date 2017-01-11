@@ -49,10 +49,12 @@ public class EnemyBase : MonoBehaviour, IEnemy {
             RaycastHit hit;
             Vector3 playerPos = GameHandler._Player.transform.position;
             playerPos.y += 1;
-            Debug.DrawLine(transform.position, playerPos, Color.red);
-            if (Physics.Raycast(transform.position, playerPos, out hit, stats.noticeRange))
+            //vector3 ipv vector3 pos, en dan y hoger zetten
+            Vector3 vec = transform.position;
+            vec.y += 1;
+            Debug.DrawLine(vec, playerPos, Color.red);
+            if (Physics.Raycast(transform.position, playerPos, out hit, stats.noticeRange)) // dit raakt hij soms niet
             {
-                print(hit.transform.tag);
                 if (hit.collider.tag == "Player")
                 {
                     #region Check If Right Rotation
@@ -97,6 +99,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                         #region Move Towards Player
 
                         transform.Translate(transform.forward * (stats.speed * Time.deltaTime), Space.World);
+                        anim.SetBool(walkStateName, true);
 
                         #endregion
                     }
@@ -115,6 +118,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     public virtual void Attack(int combo) //hier activeer je de aanval
     {
+        currentState = State.Attack;
         currentCombo = combo;
         currentAttack = stats.attacks[combo].name;
         anim.SetTrigger(currentAttack);
@@ -129,6 +133,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
     public virtual void EndAttack()
     {
         currentState = State.Walk;
+        anim.SetTrigger("Idle");
     }
 
     public virtual void ChangeHP(int addedHP)
@@ -141,9 +146,8 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     public virtual void Death()
     {
-        anim.SetBool(deathStateName, true); //hier zou je ook een trigger van kunnen maken, wat jij wilt renzo ;)
-
-        //renzo have fun
+        anim.SetBool(deathStateName, true);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
