@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Workmap/MainMenu_Scene.unity
   - enabled: 1
     path: Assets/Workmap/Sunray(art assets)/SetUpSene_Train_rails.unity
+  - enabled: 1
+    path: Assets/Workmap/Wenzo/Test.unity

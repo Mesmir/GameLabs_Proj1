@@ -108,13 +108,22 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     #endregion
 
-    protected string currentAttack;
+    [HideInInspector]
+    public string currentAttack;
+    [HideInInspector]
+    public bool doesDamage;
 
-    public virtual void Attack(int combo)
+    public virtual void Attack(int combo) //hier activeer je de aanval
     {
         currentCombo = combo;
         currentAttack = stats.attacks[combo].name;
         anim.SetTrigger(currentAttack);
+    }
+
+    public virtual void DoesDamage(bool isTrue) //dit activeer je steeds in de animatie, wanneer die damage doet / niet doet switch je dit dus. 
+        //altijd false zetten als combo stopt.
+    {
+        doesDamage = isTrue;
     }
 
     public virtual void EndAttack()

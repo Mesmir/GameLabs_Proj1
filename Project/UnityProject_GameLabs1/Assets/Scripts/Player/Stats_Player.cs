@@ -62,6 +62,7 @@ public class Stats_Player : MonoBehaviour {
                 {
                     a.damageFrames = false;
                     hp -= i.GetAttackDamage();
+                    i.DoesDamage(false);
                 }
         }
     }
