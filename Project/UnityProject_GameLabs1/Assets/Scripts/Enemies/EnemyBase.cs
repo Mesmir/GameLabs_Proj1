@@ -5,6 +5,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(AttackData), typeof(Animator))]
 public class EnemyBase : MonoBehaviour, IEnemy {
 
+    public float f;
     #region References
     public Enemy.Enemy_Class.Enemy stats;
     private Animator anim;
@@ -13,14 +14,15 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     public string walkStateName;
     public string deathStateName;
+    public string idleStateName;
 
-    public enum State {Walk, Attack }
+    public enum State {Walk, Attack}
     private State currentState = State.Walk;
 
     [HideInInspector]
     public int currentCombo;
 
-    public bool looksRight;
+    public bool looksLeft;
 
     #endregion
 
@@ -39,7 +41,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
     }
 
     #endregion
-
+    
     #region Move
 
     private void Move()
@@ -53,25 +55,24 @@ public class EnemyBase : MonoBehaviour, IEnemy {
             Vector3 vec = transform.position;
             vec.y += 1;
             Debug.DrawLine(vec, playerPos, Color.red);
-            if (Physics.Raycast(transform.position, playerPos, out hit, stats.noticeRange)) // dit raakt hij soms niet
+            if (Physics.Raycast(transform.position, playerPos, out hit, stats.noticeRange))
             {
                 if (hit.collider.tag == "Player")
                 {
                     #region Check If Right Rotation
 
-                    if ((looksRight && hit.transform.position.x < transform.position.x) ||
-                        (!looksRight && hit.transform.position.x > transform.position.x))
-                    {
-                        Quaternion newRot = Quaternion.LookRotation(-transform.forward, Vector3.up);
-                        transform.rotation = newRot;
-                        looksRight = !looksRight;
-                    }
+                    if (looksLeft && hit.transform.position.x < transform.position.x - f)
+                        SwitchRotation();
+                    else if (!looksLeft && hit.transform.position.x > transform.position.x + f)
+                        SwitchRotation();
 
                     #endregion
-                    
-                    float dis = Vector3.Distance(transform.position, hit.transform.position);
+
+                    float dis = Vector3.Distance(vec, hit.transform.position);
                     if (dis < stats.attackRange)
                     {
+                        print("Attack! range: " + stats.attackRange);
+
                         #region Attack Player
 
                         List<int> attacks = new List<int>();
@@ -93,20 +94,35 @@ public class EnemyBase : MonoBehaviour, IEnemy {
                         #endregion
 
                         #endregion
+
                     }
                     else
                     {
                         #region Move Towards Player
-
+                        print("Moving");
                         transform.Translate(transform.forward * (stats.speed * Time.deltaTime), Space.World);
                         anim.SetBool(walkStateName, true);
 
                         #endregion
                     }
-                    
                 }
             }
+            /*                                                                                                          //Fix this shit, Jan :)
+            else
+            {
+                anim.SetBool(idleStateName, true);
+                anim.SetBool(walkStateName, false);
+                print("Out of reach!");
+            }
+            */
         }
+    }
+
+    private void SwitchRotation()
+    {
+        Quaternion newRot = Quaternion.LookRotation(-transform.forward, Vector3.up);
+        transform.rotation = newRot;
+        looksLeft = !looksLeft;
     }
 
     #endregion

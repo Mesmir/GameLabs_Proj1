@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641162, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641156, b: 0.5748184, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1852,6 +1852,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1926963450586694, guid: 2a40e3111dd11204f84b2031a70c0a27, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a40e3111dd11204f84b2031a70c0a27, type: 2}
   m_IsPrefabParent: 0
@@ -2564,6 +2568,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 038ec196ffa471d41a36fbe6aeeee335, type: 2}
+    - target: {fileID: 1154246259156348, guid: 1f4b5bf0b4e7e064591a5a8485476a18, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f4b5bf0b4e7e064591a5a8485476a18, type: 2}
   m_IsPrefabParent: 0
@@ -4181,6 +4189,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 95000013148511190, guid: 446701983a148a8409c6f14fb02dfa94,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 275f33c14fbfe8645ae022d0d00c452c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 446701983a148a8409c6f14fb02dfa94, type: 2}
   m_IsPrefabParent: 0
@@ -5791,15 +5804,17 @@ MonoBehaviour:
     noticeRange: 50
     attackRange: 5
     attacks:
-    - name: Attack1
+    - name: Attack_00
       damage: 20
       damageStamina: 10
       minRange: 1
       maxRange: 5
-  walkStateName: WalkE
-  deathStateName: DeathE
+  walkStateName: Run
+  deathStateName: Death
   currentCombo: 0
   looksRight: 0
+  currentAttack: 
+  doesDamage: 0
 --- !u!114 &1853861061
 MonoBehaviour:
   m_ObjectHideFlags: 0
