@@ -44,9 +44,12 @@ public class Stats_Player : MonoBehaviour {
     private void CheckHealth()
     {
         if (hp < 1)
-        {
-            //dead
-        }
+            OnDeath();
+    }
+
+    public void OnDeath()
+    {
+
     }
 
     private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
