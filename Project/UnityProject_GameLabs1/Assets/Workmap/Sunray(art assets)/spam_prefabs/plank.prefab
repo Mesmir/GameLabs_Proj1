@@ -16,16 +16,16 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013842887174}
-  - 33: {fileID: 33000011479563496}
-  - 65: {fileID: 65000011077385748}
-  - 23: {fileID: 23000012652893844}
-  - 65: {fileID: 65000013372959498}
+  - component: {fileID: 4000013842887174}
+  - component: {fileID: 33000011479563496}
+  - component: {fileID: 65000011077385748}
+  - component: {fileID: 23000012652893844}
+  - component: {fileID: 65000013372959498}
   m_Layer: 0
   m_Name: plank
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011437026104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.3, y: 0.651, z: 4.39}
-  m_LocalScale: {x: 2.2665057, y: 0.09748475, z: 0.38504183}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.002020597, y: -0.3664593, z: -0.019344868, w: 0.9302308}
+  m_LocalPosition: {x: 13.07, y: -0.009000003, z: 7.48}
+  m_LocalScale: {x: 2.26651, y: 0.09748, z: 0.38504004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1.028, y: -42.986004, z: -1.978}
 --- !u!23 &23000012652893844
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -57,7 +57,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2122233536, guid: dbb5c01296bb2114aa45adb78455da9a, type: 3}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -65,7 +67,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
