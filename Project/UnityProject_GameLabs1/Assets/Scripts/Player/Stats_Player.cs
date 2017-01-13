@@ -8,7 +8,8 @@ public class Stats_Player : MonoBehaviour {
 
     #region Stats
 
-    private int stamina;
+    [HideInInspector]
+    public int stamina;
     private string lastStaminaLevel;
     private Combat combat;
 
@@ -16,7 +17,6 @@ public class Stats_Player : MonoBehaviour {
 
     [Range(0, 1000)]
     public int hp = 1000;
-    [Range(0, 1000)]
     public int maxStamina;
     public int lossStaminaPerSec;
 

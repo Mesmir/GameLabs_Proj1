@@ -17,7 +17,7 @@ public class UI : MonoBehaviour {
     void FixedUpdate ()
     {
         healthOrb.fillAmount = (float)player.GetComponent<Stats_Player>().hp / 1000;
-        staminaBar.fillAmount = (float)player.GetComponent<Stats_Player>().maxStamina / 1000;
+        staminaBar.fillAmount = (float)player.GetComponent<Stats_Player>().stamina / 1000;
     }
 
 }

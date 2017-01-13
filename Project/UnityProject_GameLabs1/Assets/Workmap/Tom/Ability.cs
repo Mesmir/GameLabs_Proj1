@@ -7,13 +7,18 @@ public class Ability : MonoBehaviour {
     private GameObject player;
     private Rigidbody playerRb;
     private Animator animatorPlayer;
+    [Header("Ability One")]
+    public int abilityCostOne;
+    public float AbilityOneCooldown;
     public float dashSpeed = 20f;
     private bool goTimer;
     public float timer = 0.2f;
     private float tmr;
+    private bool ableToUse;
 
     public void Start()
     {
+        ableToUse = true;
         player = GameObject.FindWithTag("Player");
         playerRb = player.GetComponent<Rigidbody>();
         animatorPlayer = player.GetComponent<Movement>().animatorPlayer;
@@ -27,6 +32,7 @@ public class Ability : MonoBehaviour {
     public void SkillOne ()
     {
         #region Timer to stop the velocity.
+
         if (goTimer)
         timer -= Time.deltaTime;
         if (timer <= 0)
@@ -36,27 +42,55 @@ public class Ability : MonoBehaviour {
             playerRb.angularVelocity = new Vector3(0, 0, 0);
             timer = tmr;
         }
+
         #endregion
 
         #region "Skill itself".
+
         if (Input.GetButton("Fire1"))
         {
-            goTimer = true;
-            if (player.transform.eulerAngles.y == 270)
-            {
-                playerRb.velocity = Vector3.left * dashSpeed;
-                animatorPlayer.Play("Jump", -1, 1.0f);
-                animatorPlayer.speed = 0;
-            }
-            else if (player.transform.eulerAngles.y == 90)
-            {
-                playerRb.velocity = Vector3.right * dashSpeed;
-                animatorPlayer.Play("Jump", -1, 1.0f);
-                animatorPlayer.speed = 0;
-            }   
+            float stam = player.GetComponent<Stats_Player>().stamina;
+            if (stam >= abilityCostOne && (stam - abilityCostOne) > 0)
+                if (ableToUse)
+                {
+                    goTimer = true;
+                    if (player.transform.eulerAngles.y == 270)
+                    {
+                        playerRb.velocity = Vector3.left * dashSpeed;
+                        animatorPlayer.Play("Jump", -1, 1.0f);
+                        animatorPlayer.speed = 0;
+                    }
+                    else if (player.transform.eulerAngles.y == 90)
+                    {
+                        playerRb.velocity = Vector3.right * dashSpeed;
+                        animatorPlayer.Play("Jump", -1, 1.0f);
+                        animatorPlayer.speed = 0;
+                    }
+                    player.GetComponent<Stats_Player>().stamina -= abilityCostOne;
+
+                    #region "Cooldown".
+
+                    StartCoroutine("SkillOneCooldown");
+
+                    #endregion
+                }
         }
         if (playerRb.velocity == new Vector3(0, 0, 0))
             animatorPlayer.speed = 1;
+
         #endregion
+    }
+
+    IEnumerator SkillOneCooldown ()
+    {
+        float f = AbilityOneCooldown;
+        while(f > 0)
+        {
+            f -= Time.deltaTime;
+            ableToUse = false;
+            print(f);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        ableToUse = true;
     }
 }
