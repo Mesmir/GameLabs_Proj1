@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
 
     public bool onGround;
     private RaycastHit hit;
+    private AudioSource footSteps;
 
     #region Variables that have to be adjusted BEFORE playing
 
@@ -53,7 +54,8 @@ public class Movement : MonoBehaviour {
         rigidbodyPlayer = GetComponent<Rigidbody>();
         wST = wallStickTime;
         jumps = maxJumps;
-        if(movementSpeed == 0)
+        footSteps = GetComponent<AudioSource>();
+        if (movementSpeed == 0)
             movementSpeed = 3;
         if (maxJumps == 0)
             maxJumps = 1;
@@ -94,6 +96,7 @@ public class Movement : MonoBehaviour {
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
+            GetComponent<AudioSource>().enabled = true;
         }
         else if (inputAxis <= -0.1)
         {
@@ -107,11 +110,16 @@ public class Movement : MonoBehaviour {
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
+            // hier audiosource afspelen
+            GetComponent<AudioSource>().enabled = true;
+            //footSteps.Play();
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
         {
             animatorPlayer.SetBool("Moving", false);
-            if(onGround)
+            GetComponent<AudioSource>().enabled = false;
+            //footSteps.Stop();
+            if (onGround)
                 animatorPlayer.SetTrigger("Idle");
         }
     }
