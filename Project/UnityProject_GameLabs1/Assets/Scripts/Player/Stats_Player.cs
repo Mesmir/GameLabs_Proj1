@@ -49,7 +49,11 @@ public class Stats_Player : MonoBehaviour {
 
     public void OnDeath()
     {
+        //animation death
 
+        //SAVE MET XMLMANAGER
+
+        //reload level
     }
 
     private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest

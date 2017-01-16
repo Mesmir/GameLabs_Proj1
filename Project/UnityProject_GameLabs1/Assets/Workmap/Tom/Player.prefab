@@ -619,6 +619,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383670406624866}
+  - component: {fileID: 64735693756703690}
   m_Layer: 0
   m_Name: weapon model centered
   m_TagString: Untagged
@@ -1957,7 +1958,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.91, y: 0.32, z: 0}
+  m_LocalPosition: {x: -14.973877, y: 5.171691, z: -6.229637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366115527286232}
@@ -2075,6 +2076,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!64 &64735693756703690
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638090089617806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!95 &95663382468956200
 Animator:
   serializedVersion: 3
@@ -2190,6 +2205,7 @@ MonoBehaviour:
   - name: 
     staminaLevel: 0
     unlockedCombos: 
+  stamina: 0
   hp: 509
   maxStamina: 732
   lossStaminaPerSec: 3
