@@ -758,13 +758,14 @@ GameObject:
   - component: {fileID: 95663382468956200}
   - component: {fileID: 54889124282746986}
   - component: {fileID: 136283835999428750}
+  - component: {fileID: 136802122433017320}
+  - component: {fileID: 82630507169405084}
+  - component: {fileID: 82772322320852868}
   - component: {fileID: 114111294905390110}
   - component: {fileID: 114865423606107590}
   - component: {fileID: 114140921367319618}
   - component: {fileID: 114208971230640044}
-  - component: {fileID: 136802122433017320}
-  - component: {fileID: 82630507169405084}
-  - component: {fileID: 82772322320852868}
+  - component: {fileID: 114615637098599144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2083,7 +2084,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2eb31212f24807d469636fcddf7f63b6, type: 3}
@@ -2163,7 +2164,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -2334,6 +2335,21 @@ MonoBehaviour:
   colliderHeight: 1.8
   crouchColliderHeight: 0
   wallStickTime: 0.3
+--- !u!114 &114615637098599144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705733606126360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22e226052850944cb80eb7ce5f55ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityCostOne: 200
+  AbilityOneCooldown: 5
+  dashSpeed: 20
+  timer: 0.2
 --- !u!114 &114865423606107590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2352,8 +2368,9 @@ MonoBehaviour:
   - name: 
     staminaLevel: 0
     unlockedCombos: 
-  hp: 509
-  maxStamina: 732
+  stamina: 0
+  hp: 1000
+  maxStamina: 1000
   lossStaminaPerSec: 3
 --- !u!136 &136283835999428750
 CapsuleCollider:
