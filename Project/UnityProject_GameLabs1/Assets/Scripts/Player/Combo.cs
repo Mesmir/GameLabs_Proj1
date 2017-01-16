@@ -16,6 +16,7 @@ public class Combo : MonoBehaviour {
         public bool isRanged;
         public GameObject projectile;
         public Transform projectileVector;
+        public AudioClip playerSND;
     }
     [Serializable]
     public class ParticleEffect
