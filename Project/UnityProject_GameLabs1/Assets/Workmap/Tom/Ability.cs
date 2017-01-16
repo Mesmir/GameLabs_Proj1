@@ -47,7 +47,7 @@ public class Ability : MonoBehaviour {
 
         #region "Skill itself".
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("SkillOne"))
         {
             float stam = player.GetComponent<Stats_Player>().stamina;
             if (stam >= abilityCostOne && (stam - abilityCostOne) > 0)
@@ -88,7 +88,7 @@ public class Ability : MonoBehaviour {
         {
             f -= Time.deltaTime;
             ableToUse = false;
-            print(f);
+            //print(f);
             yield return new WaitForSeconds(Time.deltaTime);
         }
         ableToUse = true;

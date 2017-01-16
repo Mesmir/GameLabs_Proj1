@@ -230,6 +230,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114398634399834646, guid: 135a43e02fdfa9d49a87efbac8be45a2,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 135a43e02fdfa9d49a87efbac8be45a2, type: 2}
   m_IsPrefabParent: 0
@@ -458,7 +463,7 @@ Prefab:
     - target: {fileID: 114865423606107590, guid: 9df9f1be36fc35f4eb53bb057ce61a8e,
         type: 2}
       propertyPath: lossStaminaPerSec
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9df9f1be36fc35f4eb53bb057ce61a8e, type: 2}
@@ -560,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22e226052850944cb80eb7ce5f55ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityCostOne: 10
+  abilityCostOne: 50
   AbilityOneCooldown: 1
   dashSpeed: 30
   timer: 0.1
