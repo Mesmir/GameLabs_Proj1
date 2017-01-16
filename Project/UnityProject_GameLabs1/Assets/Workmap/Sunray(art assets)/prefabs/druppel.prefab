@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4708066760170314}
+  - component: {fileID: 114696032791942094}
+  - component: {fileID: 114443232471315828}
   m_Layer: 0
   m_Name: druppel
   m_TagString: Untagged
@@ -51,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400047044354980}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.148, y: -11.64, z: 0.469}
+  m_LocalPosition: {x: 96.65, y: 5.098, z: 0.23}
   m_LocalScale: {x: 0.37496045, y: 0.37496045, z: 0.37496045}
   m_Children:
   - {fileID: 4785658690494240}
@@ -121,3 +123,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5247311, y: 1.4742675, z: 6.20018}
   m_Center: {x: 0.00020980835, y: -0.0007596612, z: -0.8286577}
+--- !u!114 &114443232471315828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400047044354980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aad8625157dfe4f981e2f3760344f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMovingUp: 0
+  speed: 0.2
+  currentY: -19.62
+  maxUp: 1
+--- !u!114 &114696032791942094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400047044354980}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a949b539f02fda4dbb5e3a295c1ba05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minY: 5.098
+  maxY: 5.5
+  startMovingUp: 0
+  speed: 0.5

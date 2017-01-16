@@ -13,8 +13,9 @@ public class Checkpoint : MonoBehaviour {
     {
         if (x.transform.tag == "Player")
         {
+			LightTorch();
             SaveProgress();
-            LightTorch();
+            
         }
     }
 
