@@ -55,12 +55,18 @@ public class EnemyBase : MonoBehaviour, IEnemy {
             Vector3 vec = transform.position;
             vec.y += 1;
             Debug.DrawLine(vec, playerPos, Color.red);
-            if (Physics.Raycast(transform.position, playerPos, out hit, stats.noticeRange))
+            print("Prepares to hit");
+            if (Physics.Linecast(vec, playerPos, out hit))
             {
+                print("Hits Something");
+                if (Vector2.Distance(vec, playerPos) > stats.noticeRange)
+                    return;
+
                 if (hit.collider.tag == "Player")
                 {
                     #region Check If Right Rotation
 
+                    print("Hits Player");
                     if (looksLeft && hit.transform.position.x < transform.position.x - f)
                         SwitchRotation();
                     else if (!looksLeft && hit.transform.position.x > transform.position.x + f)
