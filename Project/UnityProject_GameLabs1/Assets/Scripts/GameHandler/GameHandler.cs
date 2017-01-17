@@ -31,7 +31,7 @@ public class GameHandler : MonoBehaviour
     private void Awake()
     {
         Checkpoint.gHandler = this;
-        DontDestroyOnLoad(transform.gameObject);
+        //DontDestroyOnLoad(transform.gameObject);
         savedData = new SavedProgress();
         SetupReferences();
     }

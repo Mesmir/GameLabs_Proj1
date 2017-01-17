@@ -48,7 +48,7 @@ public class IngameMenu : MonoBehaviour {
 
     public void Continue()
     {
-        SwitchMenu(false);
+        menu.thisMenu.SetActive(false);
     }
 
     public void CheckCombos(Transform comboMenu)
