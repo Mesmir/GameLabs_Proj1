@@ -33,7 +33,8 @@ public class Enemy_BatLesser : Enemy_Base {
         if (onCol.tag == "Player")
         {
             isChasing = true;
-            StartCoroutine(Chase());
+            //Vector3.MoveTowards(transform.position, onCol.transform.position, 10);
+            //StartCoroutine(Chase());
         }
         //print("entering zone");
     }

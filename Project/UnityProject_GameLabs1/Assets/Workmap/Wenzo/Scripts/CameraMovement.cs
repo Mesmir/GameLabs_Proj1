@@ -6,10 +6,6 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform player;
-    //public Transform rightBorder;
-    //public Transform leftBorder;
-    //public bool mayMoveRight;
-    //public bool mayMoveLeft;
     public Camera camera;
 
     public float LookSpeed;
@@ -17,16 +13,19 @@ public class CameraMovement : MonoBehaviour
     public float followSpeedY;
     public bool posXCheck;
    
+    void Start()
+    {
+        player = GameHandler._Player.transform;
+    }
+
     void FixedUpdate()
     {
-        //Vector3 rightBorderCheck = camera.WorldToViewportPoint(rightBorder.position);
-        //Vector3 leftBorderCheck = camera.WorldToViewportPoint(leftBorder.position);
         Vector3 viewPos = camera.WorldToViewportPoint(player.position);
         Vector3 direction = player.position - transform.position;
         Quaternion rot = Quaternion.LookRotation(direction);
         rot.z = 0.0f;
         rot.y = 0.0f;
-        ///transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, rot, LookSpeed);
 
         if (player.position.y > transform.position.y + 2 || player.position.y < transform.position.y)
         {
