@@ -48,7 +48,7 @@ public class IngameMenu : MonoBehaviour {
 
     public void Continue()
     {
-
+        SwitchMenu(false);
     }
 
     public void CheckCombos(Transform comboMenu)
@@ -78,6 +78,7 @@ public class IngameMenu : MonoBehaviour {
         if (saving)
             handler.SaveProgress();
         //laad menu scene
+        menu.thisMenu.SetActive(false);
         SceneManager.LoadSceneAsync(0);
         //GameObject.Find("Canvas").SetActive(false); //temoporary ugly solution
     }
