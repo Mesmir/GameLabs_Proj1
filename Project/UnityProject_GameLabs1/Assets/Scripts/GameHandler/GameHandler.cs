@@ -30,7 +30,8 @@ public class GameHandler : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        Checkpoint.gHandler = this;
+        //DontDestroyOnLoad(transform.gameObject);
         savedData = new SavedProgress();
         SetupReferences();
     }
@@ -45,7 +46,6 @@ public class GameHandler : MonoBehaviour
     public void SpawnPlayer()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
-        Checkpoint.gHandler = this;
 
         LoadProgress();
         _Player = Instantiate(player, checkpoints[savedData.checkpoint].transform.position, Quaternion.identity);

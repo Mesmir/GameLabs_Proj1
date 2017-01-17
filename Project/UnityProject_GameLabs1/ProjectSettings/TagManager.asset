@@ -8,6 +8,7 @@ TagManager:
   - Jumpable
   - Checkpoint
   - cdMaskOne
+  - Enemy
   layers:
   - Default
   - TransparentFX
