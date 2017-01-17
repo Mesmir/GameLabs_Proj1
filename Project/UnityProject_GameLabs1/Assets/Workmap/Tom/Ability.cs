@@ -19,7 +19,7 @@ public class Ability : MonoBehaviour {
     private GameObject cdMaskObject;
     private Image cdMask;        
 
-    public void Start()
+    public void Awake()
     {
         cdMaskObject = GameObject.FindWithTag("cdMaskOne");
         cdMask = cdMaskObject.GetComponent<Image>();
@@ -59,13 +59,15 @@ public class Ability : MonoBehaviour {
                 if (ableToUse)
                 {
                     goTimer = true;
-                    if (player.transform.eulerAngles.y == 270)
+                    //if(Mathf.Approximately(270, player.transform.eulerAngles.y))
+                    if(player.transform.eulerAngles.y > 100)
                     {
                         playerRb.velocity = Vector3.left * dashSpeed;
                         animatorPlayer.Play("Jump", -1, 1.0f);
                         animatorPlayer.speed = 0;
                     }
-                    else if (player.transform.eulerAngles.y == 90)
+                    //else if(Mathf.Approximately(90, player.transform.eulerAngles.y))
+                    else if (player.transform.eulerAngles.y < 100)
                     {
                         playerRb.velocity = Vector3.right * dashSpeed;
                         animatorPlayer.Play("Jump", -1, 1.0f);
