@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Ability : MonoBehaviour {
@@ -15,9 +16,13 @@ public class Ability : MonoBehaviour {
     public float timer = 0.2f;
     private float tmr;
     private bool ableToUse;
+    private GameObject cdMaskObject;
+    private Image cdMask;        
 
     public void Start()
     {
+        cdMaskObject = GameObject.FindWithTag("cdMaskOne");
+        cdMask = cdMaskObject.GetComponent<Image>();
         ableToUse = true;
         player = GameObject.FindWithTag("Player");
         playerRb = player.GetComponent<Rigidbody>();
@@ -87,8 +92,8 @@ public class Ability : MonoBehaviour {
         while(f > 0)
         {
             f -= Time.deltaTime;
+            cdMask.fillAmount = (f / AbilityOneCooldown);
             ableToUse = false;
-            //print(f);
             yield return new WaitForSeconds(Time.deltaTime);
         }
         ableToUse = true;
