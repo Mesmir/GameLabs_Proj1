@@ -9,7 +9,7 @@ public class HandleSwitch : MonoBehaviour {
     public AudioSource targetSND;
     public Animator myAnimator;
     public string myAnimatorParameterName;
-    public AudioSource mySND;
+    //public AudioSource mySND;
 
     void Update () {
 		
