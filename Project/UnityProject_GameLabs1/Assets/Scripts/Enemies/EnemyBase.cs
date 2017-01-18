@@ -55,10 +55,8 @@ public class EnemyBase : MonoBehaviour, IEnemy {
             Vector3 vec = transform.position;
             vec.y += 1;
             Debug.DrawLine(vec, playerPos, Color.red);
-            print("Prepares to hit");
             if (Physics.Linecast(vec, playerPos, out hit))
             {
-                print("Hits Something");
                 if (Vector2.Distance(vec, playerPos) > stats.noticeRange)
                     return;
 

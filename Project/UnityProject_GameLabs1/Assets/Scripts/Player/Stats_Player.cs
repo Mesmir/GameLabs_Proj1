@@ -60,14 +60,17 @@ public class Stats_Player : MonoBehaviour {
         if (x.transform.tag == "Enemy")
         {
             Transform enemy = x.transform;
-            IEnemy i = (IEnemy)GetComponent(typeof(IEnemy));
+            IEnemy i = enemy.root.GetComponent(typeof(IEnemy)) as IEnemy;
             AttackData a = enemy.GetComponent<AttackData>();
-
-            if (i.GetState() == EnemyBase.State.Attack)
+            print(i);
+            print("ENEMIES");
+            if (i.GetState() == EnemyBase.State.Attack) 
                 if (a.damageFrames)
                 {
                     a.damageFrames = false;
                     hp -= i.GetAttackDamage();
+                    print(i.GetAttackDamage());
+                    print(hp);
                     i.DoesDamage(false);
                 }
         }
