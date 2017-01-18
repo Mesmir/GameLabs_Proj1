@@ -17,7 +17,9 @@ public class Ability : MonoBehaviour {
     private float tmr;
     private bool ableToUse;
     private GameObject cdMaskObject;
-    private Image cdMask;        
+    private Image cdMask;
+
+    private AttackData attackData;
 
     public void Awake()
     {
@@ -28,10 +30,12 @@ public class Ability : MonoBehaviour {
         playerRb = player.GetComponent<Rigidbody>();
         animatorPlayer = player.GetComponent<Movement>().animatorPlayer;
         tmr = timer;
+        attackData = GetComponent<AttackData>();
     } 
     public void Update()
     {
         SkillOne();
+        print(attackData.invincibleFrames);
     }
  
     public void SkillOne ()
@@ -46,6 +50,7 @@ public class Ability : MonoBehaviour {
             playerRb.velocity = new Vector3(0, 0, 0);
             playerRb.angularVelocity = new Vector3(0, 0, 0);
             timer = tmr;
+            attackData.SwitchInvisibilityFrames();
         }
 
         #endregion
@@ -76,7 +81,7 @@ public class Ability : MonoBehaviour {
                     player.GetComponent<Stats_Player>().stamina -= abilityCostOne;
 
                     #region "Cooldown".
-
+                    attackData.SwitchInvisibilityFrames();
                     StartCoroutine("SkillOneCooldown");
 
                     #endregion
@@ -99,5 +104,6 @@ public class Ability : MonoBehaviour {
             yield return new WaitForSeconds(Time.deltaTime);
         }
         ableToUse = true;
+
     }
 }
