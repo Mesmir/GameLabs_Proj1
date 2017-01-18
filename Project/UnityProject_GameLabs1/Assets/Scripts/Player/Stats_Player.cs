@@ -49,21 +49,22 @@ public class Stats_Player : MonoBehaviour {
 
     public void OnDeath()
     {
-
+        print("ded");
         //SAVE MET XMLMANAGER
 
         //reload level
     }
 
-    private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
+    private void OnTriggerStay(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
     {
-        if (x.transform.tag == "Enemy")
+        if (x.transform.tag == "Weapon")
         {
-            Transform enemy = x.transform;
-            IEnemy i = enemy.root.GetComponent(typeof(IEnemy)) as IEnemy;
+            if (x.transform.root.tag != "Enemy")
+                return;
+
+            Transform enemy = x.transform.root;
+            IEnemy i = enemy.GetComponent(typeof(IEnemy)) as IEnemy;
             AttackData a = enemy.GetComponent<AttackData>();
-            print(i);
-            print("ENEMIES");
             if (i.GetState() == EnemyBase.State.Attack) 
                 if (a.damageFrames)
                 {

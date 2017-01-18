@@ -172,11 +172,16 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     private void OnTriggerEnter(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
     {
-        if(x.transform.tag == "Player")
+        //print(x.transform.root.gameObject);
+        if(x.transform.tag == "Weapon")
         {
-            Transform player = x.transform;
+            if (x.transform.root.tag != "Player")
+                return;
+
+            Transform player = x.transform.root.transform;
             Combat c = player.GetComponent<Combat>();
             AttackData a = player.GetComponent<AttackData>();
+
             if (c.currentStatus == Combat.CharacterStatus.Comboing)
                 if (a.damageFrames)
                 {

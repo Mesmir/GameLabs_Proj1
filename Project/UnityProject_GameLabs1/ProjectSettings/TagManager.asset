@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - cdMaskOne
   - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX
