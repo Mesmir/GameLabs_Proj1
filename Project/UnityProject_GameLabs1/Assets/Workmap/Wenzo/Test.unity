@@ -1458,6 +1458,15 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: -17
       objectReference: {fileID: 0}
+    - target: {fileID: 1559074299589080, guid: 2b3102d04bed98145ab92e492533522d, type: 2}
+      propertyPath: m_TagString
+      value: cdMaskOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652475568728972, guid: 2b3102d04bed98145ab92e492533522d,
+        type: 2}
+      propertyPath: m_FillClockwise
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b3102d04bed98145ab92e492533522d, type: 2}
   m_IsPrefabParent: 0
