@@ -87,40 +87,45 @@ public class Movement : MonoBehaviour {
         if (inputAxis >= 0.1)
         {
             if (!onGround)
+            {
                 animatorPlayer.SetBool("Moving", false);
+                GetComponent<AudioSource>().enabled = false;
+            }
             else
             {
                 animatorPlayer.SetBool("Moving", true);
                 animatorPlayer.ResetTrigger("Idle");
+                GetComponent<AudioSource>().enabled = true;
             }
             transform.Translate(transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 270;
             transform.eulerAngles = rotation;
-            GetComponent<AudioSource>().enabled = true;
         }
         else if (inputAxis <= -0.1)
         {
             if (!onGround)
+            {
                 animatorPlayer.SetBool("Moving", false);
+                GetComponent<AudioSource>().enabled = false;
+            }
             else
             {
                 animatorPlayer.SetBool("Moving", true);
                 animatorPlayer.ResetTrigger("Idle");
+                GetComponent<AudioSource>().enabled = true;
             }
             transform.Translate(-transform.right * (movementSpeed * Time.deltaTime));
             rotation.y = 90;
             transform.eulerAngles = rotation;
-            // hier audiosource afspelen
-            GetComponent<AudioSource>().enabled = true;
-            //footSteps.Play();
         }
         else if (inputAxis > -0.1 && inputAxis < 0.1)
         {
             animatorPlayer.SetBool("Moving", false);
-            GetComponent<AudioSource>().enabled = false;
-            //footSteps.Stop();
             if (onGround)
+            {
                 animatorPlayer.SetTrigger("Idle");
+                GetComponent<AudioSource>().enabled = false;
+            }
         }
     }
 
