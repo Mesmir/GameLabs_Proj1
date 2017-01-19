@@ -619,7 +619,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383670406624866}
-  - component: {fileID: 65478716814785260}
   m_Layer: 0
   m_Name: weapon model centered
   m_TagString: Untagged
@@ -993,6 +992,7 @@ GameObject:
   - component: {fileID: 4473897399446782}
   - component: {fileID: 33490822939331356}
   - component: {fileID: 23967714170643264}
+  - component: {fileID: 65152175006494456}
   m_Layer: 0
   m_Name: default
   m_TagString: Weapon
@@ -1960,7 +1960,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.461227, y: 3.084722e-17, z: -1.3892351}
+  m_LocalPosition: {x: -7.638053, y: 3.1282995, z: -1.8699136}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366115527286232}
@@ -2078,14 +2078,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!65 &65478716814785260
+--- !u!65 &65152175006494456
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1638090089617806}
+  m_GameObject: {fileID: 1950217115958176}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.3, y: 1, z: 0.3}
