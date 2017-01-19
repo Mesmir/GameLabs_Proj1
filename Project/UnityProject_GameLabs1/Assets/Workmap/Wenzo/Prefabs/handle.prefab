@@ -52,7 +52,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4770342361961490}
   - component: {fileID: 65932622473149818}
-  - component: {fileID: 114349209029449878}
   - component: {fileID: 65589848223752034}
   - component: {fileID: 114683831506148214}
   m_Layer: 0
@@ -253,23 +252,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114349209029449878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1505266028688292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3bc35eea148de448581514aa876695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetAnimator: {fileID: 0}
-  targetAnimatorParameterName: OpenSesame
-  targetSND: {fileID: 0}
-  myAnimator: {fileID: 95364450161429794}
-  myAnimatorParameterName: SwitchFlip
-  mySND: {fileID: 0}
 --- !u!114 &114683831506148214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,4 +268,5 @@ MonoBehaviour:
   targetSND: {fileID: 0}
   myAnimator: {fileID: 95364450161429794}
   myAnimatorParameterName: SwitchFlip
-  mySND: {fileID: 0}
+  uIText: {fileID: 114302006346809848, guid: 2b3102d04bed98145ab92e492533522d, type: 2}
+  uITextMessage: Press "E" to flip the switch.
