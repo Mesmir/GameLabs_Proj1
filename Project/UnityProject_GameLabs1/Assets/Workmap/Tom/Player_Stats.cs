@@ -2,7 +2,7 @@
 using System;
 using System.Collections;
 
-public class Stats_Player : MonoBehaviour
+public class Player_Stats : MonoBehaviour
 {
 
     public StaminaLevel[] staminaLevels;
@@ -33,13 +33,14 @@ public class Stats_Player : MonoBehaviour
         stamina = maxStamina;
         combat = GetComponent<Combat>();
         InvokeRepeating("TickStamina", 0, 1f);
+        hpRegen = new int[staminaLevels.Length];
     }
 
     #region Health
 
-    public void RegenHealth()                                                       //////////////////////////////////////////
+    public void RegenHealth()
     {
-
+        hp += hpRegen[staminaLevels.Length];                                        ///////////////////////////////////
     }
 
     public void ChangeHealth(int damage)
@@ -107,14 +108,6 @@ public class Stats_Player : MonoBehaviour
             pastS--;
         if (stamina < pastS || stamina > nextS)
             for (int staminaLvl = 0; staminaLvl < staminaLevels.Length; staminaLvl++)
-            {
-                if (hp < 1000)
-                {
-                    hp += hpRegen[staminaLvl];
-                    if (hp > 1000)
-                        hp = 1000;
-                }
-
                 if (stamina < staminaLevels[staminaLvl].staminaLevel)
                 {
                     foreach (int combo in staminaLevels[staminaLvl].unlockedCombos)
@@ -123,11 +116,8 @@ public class Stats_Player : MonoBehaviour
                     return;
                 }
                 else
-                {
                     foreach (int combo in staminaLevels[staminaLvl].unlockedCombos)
                         combat.combos[combo].unlocked = true;
-                }
-            }
     }
 
     #endregion
