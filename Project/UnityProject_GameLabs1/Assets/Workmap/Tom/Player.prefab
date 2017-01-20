@@ -2275,13 +2275,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f22e226052850944cb80eb7ce5f55ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityCostOne: 750
-  AbilityOneCooldown: 5
+  abilityCostOne: 200
+  AbilityOneCooldown: 3
   dashSpeed: 20
   timer: 0.2
 --- !u!114 &114865423606107590
@@ -2315,7 +2315,17 @@ MonoBehaviour:
   hp: 1000
   maxStamina: 1000
   lossStaminaPerSec: 3
-  hpRegen: 1400000014000000140000001400000014000000
+  hpRegen:
+  - staminaTrigger: 900
+    healthGain: 50
+  - staminaTrigger: 700
+    healthGain: 40
+  - staminaTrigger: 500
+    healthGain: 30
+  - staminaTrigger: 300
+    healthGain: 20
+  - staminaTrigger: 100
+    healthGain: 10
 --- !u!136 &136283835999428750
 CapsuleCollider:
   m_ObjectHideFlags: 1

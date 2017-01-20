@@ -20,7 +20,7 @@ public class Stats_Player : MonoBehaviour
     public int hp = 1000;
     public int maxStamina;
     public int lossStaminaPerSec;
-    public int[] hpRegen;
+    public HealthRegen[] hpRegen;
 
     #endregion
 
@@ -33,13 +33,23 @@ public class Stats_Player : MonoBehaviour
         stamina = maxStamina;
         combat = GetComponent<Combat>();
         InvokeRepeating("TickStamina", 0, 1f);
+        InvokeRepeating("RegenHealth", 0, 1f);
     }
 
     #region Health
 
-    public void RegenHealth()                                                       //////////////////////////////////////////
+    public void RegenHealth ()
     {
-
+        for(int i = hpRegen.Length; i > 0; i--)
+        {
+            if (stamina <= 0) break;
+            if(hpRegen[i-1].staminaTrigger <= stamina)
+            {  
+                hp += hpRegen[i-1].healthGain;
+                if (hp > 1000) hp = 1000;
+                break;
+            }
+        }
     }
 
     public void ChangeHealth(int damage)
@@ -108,13 +118,14 @@ public class Stats_Player : MonoBehaviour
         if (stamina < pastS || stamina > nextS)
             for (int staminaLvl = 0; staminaLvl < staminaLevels.Length; staminaLvl++)
             {
+                /*
                 if (hp < 1000)
                 {
                     hp += hpRegen[staminaLvl];
                     if (hp > 1000)
                         hp = 1000;
                 }
-
+                */
                 if (stamina < staminaLevels[staminaLvl].staminaLevel)
                 {
                     foreach (int combo in staminaLevels[staminaLvl].unlockedCombos)
@@ -142,5 +153,11 @@ public class Stats_Player : MonoBehaviour
         public int[] unlockedCombos; //welk nummer in de combo list
     }
 
+    [Serializable]
+    public class HealthRegen
+    {
+        public int staminaTrigger;
+        public int healthGain;
+    }
     #endregion
 }

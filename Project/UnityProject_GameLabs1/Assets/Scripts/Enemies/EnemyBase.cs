@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class EnemyBase : MonoBehaviour, IEnemy {
 
     public float f;
+    public int staminaGiveOnDeath = 50;
     #region References
     public Enemy.Enemy_Class.Enemy stats;
     private Animator anim;
@@ -166,6 +167,7 @@ public class EnemyBase : MonoBehaviour, IEnemy {
 
     public virtual void Death()
     {
+        GameObject.FindWithTag("Player").GetComponent<Stats_Player>().stamina += staminaGiveOnDeath;
         anim.SetBool(deathStateName, true);
         Destroy(gameObject);
     }

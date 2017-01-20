@@ -63,9 +63,13 @@ public class Combat : MonoBehaviour {
                                     currentStatus = CharacterStatus.Available;
                                     if (curCombo.Count == combos[y].comboString.Length)
                                     {
-                                        currentStatus = CharacterStatus.Comboing;
-                                        UseCombo(y);
-                                        curCombo.Clear();
+                                        if (gameObject.GetComponent<Stats_Player>().stamina > combos[y].staminaCost)
+                                        {
+                                            currentStatus = CharacterStatus.Comboing;
+                                            UseCombo(y);
+                                            curCombo.Clear();
+                                        }
+                                        else return;
                                     }
                                     return;
                                 }
@@ -91,6 +95,7 @@ public class Combat : MonoBehaviour {
     private void UseCombo(int usingComboNumber)
     {
         Debug.Log(combos[usingComboNumber].name + " " + (combos[usingComboNumber].damage));
+        gameObject.GetComponent<Stats_Player>().stamina -= combos[usingComboNumber].staminaCost;
         currentStatus = CharacterStatus.Comboing;
         currentCombo = usingComboNumber;
         anim.SetTrigger(combos[currentCombo].name);

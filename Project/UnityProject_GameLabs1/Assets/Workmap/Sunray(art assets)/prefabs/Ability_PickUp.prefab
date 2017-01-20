@@ -36,6 +36,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4978017078336406}
   - component: {fileID: 114797612856039996}
+  - component: {fileID: 135073209451605644}
+  - component: {fileID: 114730514067141488}
   m_Layer: 0
   m_Name: Ability_PickUp
   m_TagString: Untagged
@@ -52,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4314203935557790}
   - component: {fileID: 33673629294182474}
-  - component: {fileID: 135254788000927472}
   - component: {fileID: 23368107447710274}
   m_Layer: 0
   m_Name: Sphere (3)
@@ -123,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1527381777849342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.43, y: 1.21, z: -0.06999999}
+  m_LocalPosition: {x: -8.49, y: 1.45, z: -0.046398547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4769438267794202}
@@ -238,6 +239,18 @@ Light:
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114730514067141488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527381777849342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4206e2bf6c68214f87dc56ae0131e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
 --- !u!114 &114797612856039996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,12 +266,12 @@ MonoBehaviour:
   speed: 0.2
   currentY: -19.62
   maxUp: 1
---- !u!135 &135254788000927472
+--- !u!135 &135073209451605644
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824658508619422}
+  m_GameObject: {fileID: 1527381777849342}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1

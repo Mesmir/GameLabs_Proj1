@@ -35,11 +35,13 @@ public class Ability : MonoBehaviour {
     public void Update()
     {
         SkillOne();
-        print(attackData.invincibleFrames);
     }
  
     public void SkillOne ()
     {
+        if (gameObject.GetComponent<Stats_Player>().stamina <= abilityCostOne)
+            cdMask.fillAmount = 1;
+
         #region Timer to stop the velocity.
 
         if (goTimer)
@@ -65,7 +67,7 @@ public class Ability : MonoBehaviour {
                 {
                     goTimer = true;
                     //if(Mathf.Approximately(270, player.transform.eulerAngles.y))
-                    if(player.transform.eulerAngles.y > 100)
+                    if (player.transform.eulerAngles.y > 100)
                     {
                         playerRb.velocity = Vector3.left * dashSpeed;
                         animatorPlayer.Play("Jump", -1, 1.0f);
@@ -81,8 +83,10 @@ public class Ability : MonoBehaviour {
                     player.GetComponent<Stats_Player>().stamina -= abilityCostOne;
 
                     #region "Cooldown".
+
                     attackData.SwitchInvisibilityFrames();
-                    StartCoroutine("SkillOneCooldown");
+                    if(stam >= abilityCostOne)
+                        StartCoroutine("SkillOneCooldown");
 
                     #endregion
                 }
@@ -98,6 +102,11 @@ public class Ability : MonoBehaviour {
         float f = AbilityOneCooldown;
         while(f > 0)
         {
+            if (gameObject.GetComponent<Stats_Player>().stamina <= abilityCostOne)
+            {
+                yield break;
+            }
+
             f -= Time.deltaTime;
             cdMask.fillAmount = (f / AbilityOneCooldown);
             ableToUse = false;
