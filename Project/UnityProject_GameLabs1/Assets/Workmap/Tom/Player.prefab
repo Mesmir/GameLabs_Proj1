@@ -2316,16 +2316,16 @@ MonoBehaviour:
   maxStamina: 1000
   lossStaminaPerSec: 3
   hpRegen:
-  - staminaTrigger: 900
-    healthGain: 50
-  - staminaTrigger: 700
-    healthGain: 40
-  - staminaTrigger: 500
-    healthGain: 30
-  - staminaTrigger: 300
-    healthGain: 20
   - staminaTrigger: 100
     healthGain: 10
+  - staminaTrigger: 300
+    healthGain: 20
+  - staminaTrigger: 500
+    healthGain: 30
+  - staminaTrigger: 700
+    healthGain: 40
+  - staminaTrigger: 900
+    healthGain: 50
 --- !u!136 &136283835999428750
 CapsuleCollider:
   m_ObjectHideFlags: 1
