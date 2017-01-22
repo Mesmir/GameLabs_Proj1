@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 96dbf89780d6c3c469c007282fb604f8
-timeCreated: 1480339508
+timeCreated: 1484578615
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -16,7 +16,7 @@ SubstanceImporter:
     inputs:
     - name: Paint_Amount
       value:
-        scalar[0]: 1
+        scalar[0]: 0.449
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -295,13 +295,13 @@ SubstanceImporter:
       wrapMode: 0
     textureAssignments:
     - shaderProp:
-        name: _MainTex
-      material: {instanceID: 0}
-      baseUID: 1881687865
-    - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
       baseUID: 1881687867
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 1881687865
     - shaderProp:
         name: _MetallicGlossMap
       material: {instanceID: 0}

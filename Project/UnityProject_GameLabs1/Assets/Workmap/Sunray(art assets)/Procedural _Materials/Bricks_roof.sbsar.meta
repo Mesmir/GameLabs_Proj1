@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a84929d004e65e642b19452839efdcc9
-timeCreated: 1480192645
+timeCreated: 1484578713
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -16,7 +16,7 @@ SubstanceImporter:
     inputs:
     - name: Paint_Amount
       value:
-        scalar[0]: 0
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -86,14 +86,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Bricks_Saturation
       value:
-        scalar[0]: 0.4
+        scalar[0]: 0.484
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Bricks_Lightness
       value:
-        scalar[0]: 0.5
+        scalar[0]: 0.479
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -295,13 +295,13 @@ SubstanceImporter:
       wrapMode: 0
     textureAssignments:
     - shaderProp:
-        name: _MainTex
-      material: {instanceID: 0}
-      baseUID: 1881687865
-    - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
       baseUID: 1881687867
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 1881687865
     - shaderProp:
         name: _MetallicGlossMap
       material: {instanceID: 0}
