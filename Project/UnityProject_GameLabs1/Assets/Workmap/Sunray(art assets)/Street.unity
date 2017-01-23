@@ -20108,6 +20108,11 @@ Prefab:
       propertyPath: converted3DLut
       value: 
       objectReference: {fileID: 2111178431}
+    - target: {fileID: 114968218495712464, guid: 0648bc709453b7e489d4e19b6d5ac938,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0648bc709453b7e489d4e19b6d5ac938, type: 2}
   m_IsPrefabParent: 0
