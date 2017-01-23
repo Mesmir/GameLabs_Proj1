@@ -1961,7 +1961,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705733606126360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.638053, y: 3.1282995, z: -1.8699136}
+  m_LocalPosition: {x: -1.8338842, y: 1.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366115527286232}
@@ -2289,11 +2289,9 @@ MonoBehaviour:
   combos:
   - name: Slashes
     unlocked: 1
-    damage: 40
+    damage: 50
     comboString:
-    - CB1
-    - CB1
-    - CB3
+    - CB2
     staminaCost: 100
     damageAreas:
     - {fileID: 1638090089617806}
@@ -2304,10 +2302,22 @@ MonoBehaviour:
     playerSND: {fileID: 8300000, guid: 0764d1c321b74894fad1b72dc4640e53, type: 3}
   - name: Stab
     unlocked: 1
-    damage: 150
+    damage: 100
     comboString:
     - CB1
-    - CB2
+    staminaCost: 0
+    damageAreas:
+    - {fileID: 1638090089617806}
+    particles: []
+    isRanged: 0
+    projectile: {fileID: 0}
+    projectileVector: {fileID: 0}
+    playerSND: {fileID: 8300000, guid: 0764d1c321b74894fad1b72dc4640e53, type: 3}
+  - name: Thrust
+    unlocked: 1
+    damage: 100
+    comboString:
+    - CB3
     staminaCost: 200
     damageAreas:
     - {fileID: 1638090089617806}
@@ -2346,7 +2356,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 95663382468956200}
   movementSpeed: 3
   jumpHeight: 3
-  maxJumps: 3
+  maxJumps: 1
   colliderHeight: 1.8
   crouchColliderHeight: 0
   wallStickTime: 0.3
@@ -2394,7 +2404,7 @@ MonoBehaviour:
     unlockedCombos: 
   stamina: 0
   hp: 1000
-  maxStamina: 1000
+  maxStamina: 999999
   lossStaminaPerSec: 3
   hpRegen:
   - staminaTrigger: 100
