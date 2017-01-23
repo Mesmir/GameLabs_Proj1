@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1769502834366530}
   m_IsPrefabParent: 1
+--- !u!1 &1146124425927226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4636093160536126}
+  - component: {fileID: 33733221966209850}
+  - component: {fileID: 65111980600408068}
+  - component: {fileID: 114323096950683858}
+  m_Layer: 0
+  m_Name: handle activator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1191920249105074
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +71,6 @@ GameObject:
   - component: {fileID: 4570946387575828}
   - component: {fileID: 33236811367901442}
   - component: {fileID: 23751703937737094}
-  - component: {fileID: 95703066464133464}
   m_Layer: 0
   m_Name: handle cylinder (2)
   m_TagString: Untagged
@@ -102,6 +119,7 @@ Transform:
   - {fileID: 4840385318096238}
   - {fileID: 4278843587566746}
   - {fileID: 4570946387575828}
+  - {fileID: 4636093160536126}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
@@ -112,11 +130,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718579917268190}
   m_LocalRotation: {x: -0.67437977, y: -0.212631, z: 0.212631, w: 0.67437977}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.321, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1.988621}
   m_Children: []
   m_Father: {fileID: 4347025262045006}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4636093160536126
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146124425927226}
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.0000028461216}
+  m_LocalPosition: {x: 0.612982, y: -2.458538, z: 0.65905505}
+  m_LocalScale: {x: 5.5121865, y: 4.658123, z: 4.658123}
+  m_Children: []
+  m_Father: {fileID: 4347025262045006}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4840385318096238
 Transform:
@@ -201,6 +232,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718579917268190}
   m_Mesh: {fileID: 4300000, guid: e62801e3a9c548841a65408807b95cbe, type: 3}
+--- !u!33 &33733221966209850
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146124425927226}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33826418655685760
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -208,20 +246,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542546233573814}
   m_Mesh: {fileID: 4300000, guid: cc880f4930368c24c901c2632887414c, type: 3}
---- !u!95 &95703066464133464
-Animator:
-  serializedVersion: 3
+--- !u!65 &65111980600408068
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718579917268190}
+  m_GameObject: {fileID: 1146124425927226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e62801e3a9c548841a65408807b95cbe, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114323096950683858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146124425927226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a0442f31ecbb440a498ee8cbd023cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  handle: {fileID: 1718579917268190}
+  amountUp: 5.5
+  up: 0.01
