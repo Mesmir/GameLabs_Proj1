@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 viewPos = camera.WorldToViewportPoint(player.position);
+        //Vector3 viewPos = camera.WorldToViewportPoint(player.position);
         Vector3 direction = player.position - transform.position;
         Quaternion rot = Quaternion.LookRotation(direction);
         rot.z = 0.0f;

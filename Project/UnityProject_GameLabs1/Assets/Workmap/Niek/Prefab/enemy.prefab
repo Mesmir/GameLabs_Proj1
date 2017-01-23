@@ -984,9 +984,10 @@ GameObject:
   - component: {fileID: 114733515921756550}
   - component: {fileID: 114106420284868460}
   - component: {fileID: 136741655522945704}
+  - component: {fileID: 136081085948320896}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,7 +1035,7 @@ GameObject:
   - component: {fileID: 65895926789552704}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1592,7 +1593,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014205814630}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12.656472, y: 0, z: -0.0000018207462}
+  m_LocalPosition: {x: 27.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000012491620534}
@@ -2112,18 +2113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f: 0
+  staminaGiveOnDeath: 50
   stats:
-    hp: 10
+    hp: 100
     drainSpeed: 10
     speed: 5
     noticeRange: 50
-    attackRange: 5
+    attackRange: 1.5
     attacks:
     - name: Attack_00
-      damage: 150
-      damageStamina: 100
+      damage: 75
+      damageStamina: 25
       minRange: 1
-      maxRange: 6
+      maxRange: 4
   walkStateName: Run
   deathStateName: Death
   idleStateName: Idle
@@ -2131,6 +2133,19 @@ MonoBehaviour:
   looksLeft: 0
   currentAttack: Attack_00
   doesDamage: 0
+--- !u!136 &136081085948320896
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014205814630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.58
+  m_Height: 2.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!136 &136741655522945704
 CapsuleCollider:
   m_ObjectHideFlags: 1
