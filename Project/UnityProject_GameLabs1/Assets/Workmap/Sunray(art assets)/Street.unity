@@ -2093,6 +2093,36 @@ Prefab:
       propertyPath: m_Name
       value: Canvas 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 223084347281862770, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114789236664653496, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114380090455735026, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114380090455735026, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114380090455735026, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114380090455735026, guid: 27fe68b39f235ad44883c585e27ce5c2,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27fe68b39f235ad44883c585e27ce5c2, type: 2}
   m_IsPrefabParent: 0
@@ -23984,7 +24014,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585158708953376, guid: 6bfa0fde1d5376547b4aea7f960a3971, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4585158708953376, guid: 6bfa0fde1d5376547b4aea7f960a3971, type: 2}
       propertyPath: m_LocalPosition.y
@@ -23992,7 +24022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4585158708953376, guid: 6bfa0fde1d5376547b4aea7f960a3971, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.62
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4585158708953376, guid: 6bfa0fde1d5376547b4aea7f960a3971, type: 2}
       propertyPath: m_LocalRotation.x

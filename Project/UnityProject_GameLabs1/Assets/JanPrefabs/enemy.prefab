@@ -2105,8 +2105,8 @@ MonoBehaviour:
     hp: 1
     drainSpeed: 10
     speed: 5
-    noticeRange: 50
-    attackRange: 1.5
+    noticeRange: 4
+    attackRange: 3
     attacks:
     - name: Attack_00
       damage: 150
