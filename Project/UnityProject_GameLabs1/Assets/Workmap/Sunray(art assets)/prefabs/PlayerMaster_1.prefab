@@ -908,7 +908,6 @@ GameObject:
   - component: {fileID: 92515707017329378}
   - component: {fileID: 81957645265674024}
   - component: {fileID: 114500358372712760}
-  - component: {fileID: 114662064539354834}
   - component: {fileID: 114091446673612258}
   - component: {fileID: 114063242584774882}
   - component: {fileID: 114739893959994940}
@@ -918,6 +917,8 @@ GameObject:
   - component: {fileID: 114625778133302168}
   - component: {fileID: 114038239324249382}
   - component: {fileID: 114723738494895280}
+  - component: {fileID: 114133517179969176}
+  - component: {fileID: 114265441120298956}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1236,13 +1237,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843730912990358}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.7759552, y: -0.46, z: 0.070001125}
+  m_LocalRotation: {x: -0, y: 0.99916965, z: -0.04074306, w: 0}
+  m_LocalPosition: {x: -0.7759552, y: -0.1500001, z: -0.53999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4691947786378336}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 4.67, y: 180.00002, z: 0}
 --- !u!4 &4222536277624352
 Transform:
   m_ObjectHideFlags: 1
@@ -1748,11 +1749,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891855710669180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.16, y: 2.9, z: 5.4079294}
+  m_LocalPosition: {x: -12.769, y: 2.72, z: 5.371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4848361795324296}
   - {fileID: 4187383523495588}
+  - {fileID: 4848361795324296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1918,15 +1919,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1301157445405004}
-  m_LocalRotation: {x: -0, y: -0.74015075, z: -0, w: 0.672441}
-  m_LocalPosition: {x: 0.38497162, y: -2.086793, z: -5.5758758}
+  m_LocalRotation: {x: -0, y: -0.7933526, z: -0, w: 0.6087625}
+  m_LocalPosition: {x: -0.8242855, y: -1.6375222, z: -4.9748936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4883024506075440}
   - {fileID: 4291036084457070}
   m_Father: {fileID: 4691947786378336}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -95.489006, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -15.000001, z: 0}
 --- !u!4 &4848850816942710
 Transform:
   m_ObjectHideFlags: 1
@@ -2453,9 +2454,9 @@ MonoBehaviour:
   excludeFarPixels: 1
   useRadialDistance: 0
   heightFog: 1
-  height: 1.3
-  heightDensity: 0.2
-  startDistance: 0
+  height: 3
+  heightDensity: 3.56
+  startDistance: 26
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!114 &114117011698506016
 MonoBehaviour:
@@ -2610,6 +2611,198 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 2ea3e38e6a966aa45a93bfe7235c1b0b, type: 3}
     contribution: 0.05
   m_Shader: {fileID: 4800000, guid: 964b34bbab7f5e64fa40f37eaccac1ad, type: 3}
+--- !u!114 &114133517179969176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843730912990358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a7625302996c94ba07a8ca3351f668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HistogramComputeShader: {fileID: 7200000, guid: 5ee4b74fa28a3e74e89423dd49705fc5,
+    type: 3}
+  m_HistogramShader: {fileID: 4800000, guid: 9a8e838691462194482a43a02e424876, type: 3}
+  histogramRefreshOnPlay: 1
+  m_EyeAdaptation:
+    enabled: 0
+    middleGrey: 0.5
+    min: -3
+    max: 3
+    speed: 1.5
+    showDebug: 0
+  m_Tonemapping:
+    enabled: 1
+    tonemapper: 6
+    exposure: 1
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    neutralBlackIn: -0.027
+    neutralWhiteIn: 6.7
+    neutralBlackOut: 0.02
+    neutralWhiteOut: 6.83
+    neutralWhiteLevel: 12.2
+    neutralWhiteClip: 10
+  m_ColorGrading:
+    enabled: 1
+    precision: 16
+    colorWheels:
+      shadows: {r: 0.77798617, g: 0.78428185, b: 1, a: 1}
+      midtones: {r: 0.8902468, g: 0.9010395, b: 1, a: 1}
+      highlights: {r: 1, g: 0.9839855, b: 0.5665782, a: 1}
+    basics:
+      temperatureShift: 0
+      tint: 0
+      hue: 0
+      saturation: 1
+      vibrance: 0
+      value: 1
+      contrast: 1
+      gain: 1
+      gamma: 1
+    channelMixer:
+      currentChannel: 0
+      channels:
+      - {x: 1, y: 0, z: 0}
+      - {x: 0, y: 1, z: 0}
+      - {x: 0, y: 0, z: 1}
+    curves:
+      master:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      red:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      green:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      blue:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+    useDithering: 0
+    showDebug: 0
+  m_Lut:
+    enabled: 0
+    texture: {fileID: 0}
+    contribution: 1
+  m_Shader: {fileID: 4800000, guid: 964b34bbab7f5e64fa40f37eaccac1ad, type: 3}
+--- !u!114 &114265441120298956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843730912990358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a338d679868f45439ea43c7ae035e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    visualizeFocus: 0
+    tweakMode: 0
+    filteringQuality: 2
+    apertureShape: 0
+    apertureOrientation: 0
+  focus:
+    transform: {fileID: 0}
+    focusPlane: 4.978579
+    range: 3.0000105
+    nearPlane: 3.4785738
+    nearFalloff: 0
+    farPlane: 6.4785843
+    farFalloff: 10
+    nearBlurRadius: 6.8
+    farBlurRadius: 4.1
+  bokehTexture:
+    texture: {fileID: 0}
+    scale: 1
+    intensity: 50
+    threshold: 2
+    spawnHeuristic: 0.15
+  m_FilmicDepthOfFieldShader: {fileID: 4800000, guid: bff0e5458fb914f5c9985ba4f09171d2,
+    type: 3}
+  m_MedianFilterShader: {fileID: 4800000, guid: a058b22d4123add4b807e832604e5e7b,
+    type: 3}
+  m_TextureBokehShader: {fileID: 4800000, guid: c961b8ed1f00f924d804ada5143bd0e8,
+    type: 3}
 --- !u!114 &114356675397874112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2674,7 +2867,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 95485092845242004}
   movementSpeed: 3
   jumpHeight: 3
-  maxJumps: 1
+  maxJumps: 3
   colliderHeight: 1.8
   crouchColliderHeight: 0
   wallStickTime: 0.3
@@ -2701,14 +2894,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843730912990358}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cde8c0fd649d9b46bb403ba5e157391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: b61f0d8d8244b4b28aa66b0c8cb46a8d, type: 3}
   converted3DLut: {fileID: 0}
-  basedOnTempTex: 
+  basedOnTempTex: Assets/Cinema Suite/Cinema Themes/LUTs/Documentary3D16.png
 --- !u!114 &114617850863829792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2741,26 +2934,6 @@ MonoBehaviour:
   separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
   contrastCompositeShader: {fileID: 4800000, guid: 273404942eede4ea1883ca1fb2942507,
     type: 3}
---- !u!114 &114662064539354834
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1843730912990358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0923359e9e352a4b9b11c7b7161ad67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Radius: 0.4
-  m_SampleCount: 1
-  m_OcclusionIntensity: 2.62
-  m_Blur: 2
-  m_Downsampling: 2
-  m_OcclusionAttenuation: 1.058
-  m_MinZ: 0.01
-  m_SSAOShader: {fileID: 4800000, guid: 43ca18288c424f645aaa1e9e07f04c50, type: 3}
-  m_RandomTexture: {fileID: 2800000, guid: a181ca8e3c62f3e4b8f183f6c586b032, type: 3}
 --- !u!114 &114701846123419450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2790,7 +2963,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843730912990358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a4a6e6960729d540b082288b9873eae, type: 3}
   m_Name: 
