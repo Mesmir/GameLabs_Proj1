@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Stats_Player : MonoBehaviour
 {
@@ -66,10 +67,10 @@ public class Stats_Player : MonoBehaviour
 
     public void OnDeath()
     {
-        print("ded");
         //SAVE MET XMLMANAGER
-
+        GameHandler.gH.SaveProgress();
         //reload level
+        SceneManager.LoadScene(Application.loadedLevel);
     }
 
     private void OnTriggerStay(Collider x) //trigger lijkt me handiger, maar als je een manier vindt om dit in een collission te veranderen, be my guest
