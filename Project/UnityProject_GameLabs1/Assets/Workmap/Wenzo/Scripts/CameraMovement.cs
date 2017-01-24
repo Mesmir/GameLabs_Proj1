@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     public Transform player;
     public Camera camera;
 
-    public float LookSpeed;
+    private float LookSpeed = 1f;
     public float followSpeedX;
     public float followSpeedY;
     public bool posXCheck;
@@ -38,7 +38,7 @@ public class CameraMovement : MonoBehaviour
         //{
             Vector3 tempPosOfX = transform.position;
             tempPosOfX.x = player.position.x;
-            transform.position = Vector3.MoveTowards(transform.position, tempPosOfX, followSpeedX);
+            transform.position = Vector3.MoveTowards(transform.position, tempPosOfX, (followSpeedX / 2));
             //Debug.Log("you may move");
         //}
         //if (rightBorderCheck.x < 1 && viewPos.x > 0.45f || leftBorderCheck.x > 0 && viewPos.x < 0.55f)// als de rightborder in view komt stopt ie, check of de speler aan de linkerkant van het scherm is om terug te gaan.
