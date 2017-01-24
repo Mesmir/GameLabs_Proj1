@@ -2102,7 +2102,7 @@ MonoBehaviour:
   f: 0
   staminaGiveOnDeath: 50
   stats:
-    hp: 500
+    hp: 1
     drainSpeed: 10
     speed: 5
     noticeRange: 50

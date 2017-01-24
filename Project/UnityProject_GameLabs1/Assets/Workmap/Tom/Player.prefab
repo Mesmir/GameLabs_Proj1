@@ -2404,7 +2404,7 @@ MonoBehaviour:
     unlockedCombos: 
   stamina: 0
   hp: 1000
-  maxStamina: 999999
+  maxStamina: 1000
   lossStaminaPerSec: 3
   hpRegen:
   - staminaTrigger: 100
